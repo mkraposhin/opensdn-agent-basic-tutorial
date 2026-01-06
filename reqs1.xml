@@ -1,0 +1,3875 @@
+1767710428153912 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 8139 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<node type="virtual-router">
+				<name>default-global-system-config:compute0</name>
+				<virtual-router-dpdk-enabled>false</virtual-router-dpdk-enabled>
+				<virtual-router-ip-address>172.16.0.54</virtual-router-ip-address>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>13267862157587664583</uuid-mslong>
+						<uuid-lslong>9236547022019350166</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:30:15</created>
+					<last-modified>2025-11-26T10:07:38</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>compute0</display-name>
+			</node>
+			<node type="global-system-config">
+				<name>default-global-system-config</name>
+				<autonomous-system>64512</autonomous-system>
+				<enable-4byte-as>false</enable-4byte-as>
+				<config-version>1.0</config-version>
+				<ibgp-auto-mesh>true</ibgp-auto-mesh>
+				<ip-fabric-subnets>
+					<subnet>
+						<ip-prefix>172.16.0.0</ip-prefix>
+						<ip-prefix-len>16</ip-prefix-len>
+					</subnet>
+				</ip-fabric-subnets>
+				<mac-aging-time>300</mac-aging-time>
+				<igmp-enable>false</igmp-enable>
+				<enable-security-policy-draft>false</enable-security-policy-draft>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>8654785006032539582</uuid-mslong>
+						<uuid-lslong>12758875057550270056</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:21:00</created>
+					<last-modified>2025-12-29T09:34:55</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+			</node>
+			<link>
+				<node type="virtual-router">
+					<name>default-global-system-config:compute0</name>
+				</node>
+				<node type="global-system-config">
+					<name>default-global-system-config</name>
+				</node>
+				<metadata type="global-system-config-virtual-router" />
+			</link>
+			<node type="virtual-machine-interface">
+				<name>default-global-system-config:compute0:vhost0</name>
+				<virtual-machine-interface-mac-addresses>
+					<mac-address>02:bd:fd:f3:ef:43</mac-address>
+				</virtual-machine-interface-mac-addresses>
+				<virtual-machine-interface-disable-policy>true</virtual-machine-interface-disable-policy>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>13690366651231390072</uuid-mslong>
+						<uuid-lslong>11492759124734497481</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:30:15</created>
+					<last-modified>2025-11-18T16:30:15</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>vhost0</display-name>
+			</node>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-global-system-config:compute0:vhost0</name>
+				</node>
+				<node type="virtual-router">
+					<name>default-global-system-config:compute0</name>
+				</node>
+				<metadata type="virtual-router-virtual-machine-interface" />
+			</link>
+			<node type="bgp-router">
+				<name>default-domain:default-project:ip-fabric:__default__:head0</name>
+				<bgp-router-parameters>
+					<admin-down>false</admin-down>
+					<vendor>contrail</vendor>
+					<cluster-id>0</cluster-id>
+					<autonomous-system>64512</autonomous-system>
+					<identifier>172.16.0.24</identifier>
+					<address>172.16.0.24</address>
+					<port>179</port>
+					<source-port>0</source-port>
+					<hold-time>0</hold-time>
+					<address-families>
+						<family>route-target</family>
+						<family>inet-vpn</family>
+						<family>e-vpn</family>
+						<family>erm-vpn</family>
+						<family>inet6-vpn</family>
+					</address-families>
+					<auth-data>
+						<key-type></key-type>
+					</auth-data>
+					<local-autonomous-system>0</local-autonomous-system>
+					<router-type>control-node</router-type>
+					<gateway-address></gateway-address>
+					<ipv6-gateway-address></ipv6-gateway-address>
+				</bgp-router-parameters>
+			</node>
+			<link>
+				<node type="global-system-config">
+					<name>default-global-system-config</name>
+				</node>
+				<node type="bgp-router">
+					<name>default-domain:default-project:ip-fabric:__default__:head0</name>
+				</node>
+				<metadata type="global-system-config-bgp-router" />
+			</link>
+			<node type="global-qos-config">
+				<name>default-global-system-config:default-global-qos-config</name>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>850259733400143870</uuid-mslong>
+						<uuid-lslong>13661238070064185731</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:21:13</created>
+					<last-modified>2025-11-18T16:21:13</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+			</node>
+			<link>
+				<node type="global-qos-config">
+					<name>default-global-system-config:default-global-qos-config</name>
+				</node>
+				<node type="global-system-config">
+					<name>default-global-system-config</name>
+				</node>
+				<metadata type="global-system-config-global-qos-config" />
+			</link>
+			<node type="global-vrouter-config">
+				<name>default-global-system-config:default-global-vrouter-config</name>
+				<linklocal-services>
+					<linklocal-service-entry>
+						<linklocal-service-name>metadata</linklocal-service-name>
+						<linklocal-service-ip>169.254.169.254</linklocal-service-ip>
+						<linklocal-service-port>80</linklocal-service-port>
+						<ip-fabric-DNS-service-name></ip-fabric-DNS-service-name>
+						<ip-fabric-service-port>8775</ip-fabric-service-port>
+						<ip-fabric-service-ip>172.16.0.24</ip-fabric-service-ip>
+					</linklocal-service-entry>
+				</linklocal-services>
+				<encapsulation-priorities>
+					<encapsulation>MPLSoUDP</encapsulation>
+					<encapsulation>MPLSoGRE</encapsulation>
+					<encapsulation>VXLAN</encapsulation>
+				</encapsulation-priorities>
+				<vxlan-network-identifier-mode>automatic</vxlan-network-identifier-mode>
+				<enable-security-logging>true</enable-security-logging>
+				<encryption-mode>none</encryption-mode>
+				<global-max-vmi-flows>0</global-max-vmi-flows>
+				<max-vm-flows-percent>0</max-vm-flows-percent>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>11393303099947370746</uuid-mslong>
+						<uuid-lslong>9870615863531603204</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:21:00</created>
+					<last-modified>2025-12-29T09:34:54</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+			</node>
+			<link>
+				<node type="global-vrouter-config">
+					<name>default-global-system-config:default-global-vrouter-config</name>
+				</node>
+				<node type="global-system-config">
+					<name>default-global-system-config</name>
+				</node>
+				<metadata type="global-system-config-global-vrouter-config" />
+			</link>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
+1767710428154647 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 5865 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<node type="routing-instance">
+				<name>default-domain:default-project:ip-fabric:__default__</name>
+				<routing-instance-is-default>false</routing-instance-is-default>
+				<routing-instance-has-pnf>false</routing-instance-has-pnf>
+				<routing-instance-fabric-snat>false</routing-instance-fabric-snat>
+			</node>
+			<link>
+				<node type="bgp-router">
+					<name>default-domain:default-project:ip-fabric:__default__:head0</name>
+				</node>
+				<node type="routing-instance">
+					<name>default-domain:default-project:ip-fabric:__default__</name>
+				</node>
+				<metadata type="instance-bgp-router" />
+			</link>
+			<node type="application-policy-set">
+				<name>default-policy-management:default-application-policy-set</name>
+				<all-applications>true</all-applications>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>12112521654802072677</uuid-mslong>
+						<uuid-lslong>9749917566680178655</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:21:01</created>
+					<last-modified>2025-12-29T09:34:47</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+			</node>
+			<link>
+				<node type="application-policy-set">
+					<name>default-policy-management:default-application-policy-set</name>
+				</node>
+				<node type="global-vrouter-config">
+					<name>default-global-system-config:default-global-vrouter-config</name>
+				</node>
+				<metadata type="application-policy-set-global-vrouter-config" />
+			</link>
+			<node type="policy-management">
+				<name>default-policy-management</name>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>4827005527391161660</uuid-mslong>
+						<uuid-lslong>12729021799107210910</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:21:01</created>
+					<last-modified>2025-11-18T16:21:01</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+			</node>
+			<link>
+				<node type="application-policy-set">
+					<name>default-policy-management:default-application-policy-set</name>
+				</node>
+				<node type="policy-management">
+					<name>default-policy-management</name>
+				</node>
+				<metadata type="policy-management-application-policy-set" />
+			</link>
+			<node type="virtual-machine-interface-routing-instance">
+				<name>attr(default-domain:default-project:ip-fabric:ip-fabric,default-global-system-config:compute0:vhost0)</name>
+				<value>
+					<direction>both</direction>
+					<vlan-tag>0</vlan-tag>
+					<src-mac></src-mac>
+					<dst-mac></dst-mac>
+					<mpls-label>0</mpls-label>
+					<service-chain-address></service-chain-address>
+					<ipv6-service-chain-address></ipv6-service-chain-address>
+					<protocol></protocol>
+				</value>
+			</node>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-global-system-config:compute0:vhost0</name>
+				</node>
+				<node type="virtual-machine-interface-routing-instance">
+					<name>attr(default-domain:default-project:ip-fabric:ip-fabric,default-global-system-config:compute0:vhost0)</name>
+				</node>
+				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+			<node type="virtual-network">
+				<name>default-domain:default-project:ip-fabric</name>
+				<virtual-network-category>tenant</virtual-network-category>
+				<virtual-network-network-id>2</virtual-network-network-id>
+				<is-provider-network>true</is-provider-network>
+				<port-security-enabled>true</port-security-enabled>
+				<fabric-snat>false</fabric-snat>
+				<is-shared>false</is-shared>
+				<flood-unknown-unicast>false</flood-unknown-unicast>
+				<mac-learning-enabled>false</mac-learning-enabled>
+				<mac-aging-time>300</mac-aging-time>
+				<pbb-evpn-enable>false</pbb-evpn-enable>
+				<pbb-etree-enable>false</pbb-etree-enable>
+				<layer2-control-word>false</layer2-control-word>
+				<igmp-enable>false</igmp-enable>
+				<mac-ip-learning-enable>false</mac-ip-learning-enable>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>172438934352251795</uuid-mslong>
+						<uuid-lslong>9714071887055040737</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:21:01</created>
+					<last-modified>2025-11-18T17:10:54</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+			</node>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-global-system-config:compute0:vhost0</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:default-project:ip-fabric</name>
+				</node>
+				<metadata type="virtual-machine-interface-virtual-network" />
+			</link>
+			<node type="routing-instance">
+				<name>default-domain:default-project:ip-fabric:ip-fabric</name>
+				<routing-instance-is-default>true</routing-instance-is-default>
+				<routing-instance-has-pnf>false</routing-instance-has-pnf>
+				<routing-instance-fabric-snat>false</routing-instance-fabric-snat>
+			</node>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
+1767710428154943 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 13163 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<link>
+				<node type="virtual-machine-interface-routing-instance">
+					<name>attr(default-domain:default-project:ip-fabric:ip-fabric,default-global-system-config:compute0:vhost0)</name>
+				</node>
+				<node type="routing-instance">
+					<name>default-domain:default-project:ip-fabric:ip-fabric</name>
+				</node>
+				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+			<node type="project">
+				<name>default-domain:default-project</name>
+				<quota>
+					<defaults>-1</defaults>
+					<floating-ip>0</floating-ip>
+					<instance-ip>0</instance-ip>
+					<virtual-machine-interface>0</virtual-machine-interface>
+					<virtual-network>0</virtual-network>
+					<virtual-router>0</virtual-router>
+					<virtual-DNS>0</virtual-DNS>
+					<virtual-DNS-record>0</virtual-DNS-record>
+					<bgp-router>0</bgp-router>
+					<network-ipam>0</network-ipam>
+					<access-control-list>0</access-control-list>
+					<network-policy>0</network-policy>
+					<floating-ip-pool>0</floating-ip-pool>
+					<service-template>0</service-template>
+					<service-instance>0</service-instance>
+					<logical-router>0</logical-router>
+					<security-group>0</security-group>
+					<security-group-rule>0</security-group-rule>
+					<subnet>0</subnet>
+					<global-vrouter-config>0</global-vrouter-config>
+					<loadbalancer>0</loadbalancer>
+					<loadbalancer-listener>0</loadbalancer-listener>
+					<loadbalancer-pool>0</loadbalancer-pool>
+					<loadbalancer-member>0</loadbalancer-member>
+					<loadbalancer-healthmonitor>0</loadbalancer-healthmonitor>
+					<virtual-ip>0</virtual-ip>
+					<security-logging-object>0</security-logging-object>
+					<route-table>0</route-table>
+					<firewall-group>0</firewall-group>
+					<firewall-policy>0</firewall-policy>
+					<firewall-rule>0</firewall-rule>
+					<host-based-service>0</host-based-service>
+				</quota>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>17299232793099127016</uuid-mslong>
+						<uuid-lslong>12631872081641666361</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:21:00</created>
+					<last-modified>2025-12-29T09:34:47</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+			</node>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:default-project:ip-fabric</name>
+				</node>
+				<node type="project">
+					<name>default-domain:default-project</name>
+				</node>
+				<metadata type="project-virtual-network" />
+			</link>
+			<node type="access-control-list">
+				<name>default-domain:default-project:ip-fabric:ip-fabric</name>
+				<access-control-list-entries>
+					<dynamic>false</dynamic>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:default-project:ip-fabric</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:default-project:ip-fabric</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>00000000-0000-0000-0000-100000000001</rule-uuid>
+						<direction></direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:default-project:ip-fabric</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>any</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>deny</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>00000000-0000-0000-0000-100000000002</rule-uuid>
+						<direction>&lt;&gt;</direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>any</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>any</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>00000000-0000-0000-0000-100000000001</rule-uuid>
+						<direction></direction>
+					</acl-rule>
+				</access-control-list-entries>
+				<access-control-list-hash>0</access-control-list-hash>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>11988027898272894423</uuid-mslong>
+						<uuid-lslong>13409061457637851302</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:21:29</created>
+					<last-modified>2025-12-29T09:34:49</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>ip-fabric</display-name>
+			</node>
+			<link>
+				<node type="access-control-list">
+					<name>default-domain:default-project:ip-fabric:ip-fabric</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:default-project:ip-fabric</name>
+				</node>
+				<metadata type="virtual-network-access-control-list" />
+			</link>
+			<node type="virtual-network">
+				<name>default-domain:admin:public</name>
+				<virtual-network-network-id>6</virtual-network-network-id>
+				<router-external>true</router-external>
+				<is-shared>true</is-shared>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>16848566164744850001</uuid-mslong>
+						<uuid-lslong>9540655124793224394</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:10:54</created>
+					<last-modified>2025-11-18T17:10:54</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>public</display-name>
+			</node>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:default-project:ip-fabric</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:public</name>
+				</node>
+				<metadata type="virtual-network-provider-network" />
+			</link>
+			<link>
+				<node type="routing-instance">
+					<name>default-domain:default-project:ip-fabric:__default__</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:default-project:ip-fabric</name>
+				</node>
+				<metadata type="virtual-network-routing-instance" />
+			</link>
+			<link>
+				<node type="routing-instance">
+					<name>default-domain:default-project:ip-fabric:ip-fabric</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:default-project:ip-fabric</name>
+				</node>
+				<metadata type="virtual-network-routing-instance" />
+			</link>
+			<node type="project">
+				<name>default-domain:admin</name>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>17677662658953888052</uuid-mslong>
+						<uuid-lslong>12470699760201766591</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:10:51</created>
+					<last-modified>2025-12-29T13:02:09</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>admin</display-name>
+			</node>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
+1767710428155844 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 14305 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:admin:public</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-virtual-network" />
+			</link>
+			<node type="access-control-list">
+				<name>default-domain:admin:public:public</name>
+				<access-control-list-entries>
+					<dynamic>false</dynamic>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix>0.0.0.0</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>any</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>113c3b66-e770-4ef1-9e8f-bd1e481db0d6</rule-uuid>
+						<direction>&lt;&gt;</direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:admin:public</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:admin:public</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>00000000-0000-0000-0000-100000000001</rule-uuid>
+						<direction></direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:admin:public</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:default-project:ip-fabric</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>deny</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>00000000-0000-0000-0000-100000000002</rule-uuid>
+						<direction>&lt;&gt;</direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>any</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>any</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>00000000-0000-0000-0000-100000000001</rule-uuid>
+						<direction></direction>
+					</acl-rule>
+				</access-control-list-entries>
+				<access-control-list-hash>0</access-control-list-hash>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>11923866788884794255</uuid-mslong>
+						<uuid-lslong>9471120667622303553</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:10:54</created>
+					<last-modified>2025-12-29T09:34:49</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>public</display-name>
+			</node>
+			<link>
+				<node type="access-control-list">
+					<name>default-domain:admin:public:public</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:public</name>
+				</node>
+				<metadata type="virtual-network-access-control-list" />
+			</link>
+			<node type="floating-ip-pool">
+				<name>default-domain:admin:public:common</name>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>6530949769343290780</uuid-mslong>
+						<uuid-lslong>9911321539714582356</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:10:54</created>
+					<last-modified>2025-11-18T17:10:54</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>common</display-name>
+			</node>
+			<link>
+				<node type="floating-ip-pool">
+					<name>default-domain:admin:public:common</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:public</name>
+				</node>
+				<metadata type="virtual-network-floating-ip-pool" />
+			</link>
+			<node type="virtual-network-network-ipam">
+				<name>attr(default-domain:admin:public,default-domain:admin:space)</name>
+				<value>
+					<ipam-subnets>
+						<subnet>
+							<ip-prefix>172.16.24.0</ip-prefix>
+							<ip-prefix-len>24</ip-prefix-len>
+						</subnet>
+						<default-gateway>172.16.24.254</default-gateway>
+						<dns-server-address>172.16.24.253</dns-server-address>
+						<subnet-uuid>31d3e76e-46f0-40a2-ab13-cb60cb34d6d8</subnet-uuid>
+						<enable-dhcp>true</enable-dhcp>
+						<addr_from_start>false</addr_from_start>
+						<dhcp-option-list />
+						<host-routes />
+						<subnet-name>public-v4</subnet-name>
+						<alloc-unit>1</alloc-unit>
+						<created>1970-01-01T00:00:00</created>
+						<last-modified>1970-01-01T00:00:00</last-modified>
+						<subscriber-tag></subscriber-tag>
+						<vlan-tag>0</vlan-tag>
+					</ipam-subnets>
+					<host-routes />
+				</value>
+			</node>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:admin:public</name>
+				</node>
+				<node type="virtual-network-network-ipam">
+					<name>attr(default-domain:admin:public,default-domain:admin:space)</name>
+				</node>
+				<metadata type="virtual-network-network-ipam" />
+			</link>
+			<node type="routing-instance">
+				<name>default-domain:admin:public:public</name>
+				<routing-instance-is-default>true</routing-instance-is-default>
+				<routing-instance-has-pnf>false</routing-instance-has-pnf>
+				<routing-instance-fabric-snat>false</routing-instance-fabric-snat>
+			</node>
+			<link>
+				<node type="routing-instance">
+					<name>default-domain:admin:public:public</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:public</name>
+				</node>
+				<metadata type="virtual-network-routing-instance" />
+			</link>
+			<node type="logical-router">
+				<name>default-domain:admin:SGWvxlan1</name>
+				<configured-route-target-list>
+					<route-target>target:64510:123110</route-target>
+				</configured-route-target-list>
+				<vxlan-network-identifier>123110</vxlan-network-identifier>
+				<logical-router-type>vxlan-routing</logical-router-type>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>6469487536307324457</uuid-mslong>
+						<uuid-lslong>10845498710827839687</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:09</created>
+					<last-modified>2025-11-18T17:11:09</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxlan1</display-name>
+			</node>
+			<link>
+				<node type="logical-router">
+					<name>default-domain:admin:SGWvxlan1</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-logical-router" />
+			</link>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
+1767710428156114 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 6761 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<node type="logical-router">
+				<name>default-domain:admin:SGWvxlan2</name>
+				<configured-route-target-list>
+					<route-target>target:64510:123111</route-target>
+				</configured-route-target-list>
+				<vxlan-network-identifier>123111</vxlan-network-identifier>
+				<logical-router-type>vxlan-routing</logical-router-type>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>13964278544410689733</uuid-mslong>
+						<uuid-lslong>11183534693138513399</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:08</created>
+					<last-modified>2025-11-18T17:11:08</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxlan2</display-name>
+			</node>
+			<link>
+				<node type="logical-router">
+					<name>default-domain:admin:SGWvxlan2</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-logical-router" />
+			</link>
+			<node type="logical-router">
+				<name>default-domain:admin:SGWvxMULTI</name>
+				<configured-route-target-list>
+					<route-target>target:64510:123211</route-target>
+				</configured-route-target-list>
+				<vxlan-network-identifier>123211</vxlan-network-identifier>
+				<logical-router-type>vxlan-routing</logical-router-type>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>16782104724998144677</uuid-mslong>
+						<uuid-lslong>12593674937223707633</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:08</created>
+					<last-modified>2025-11-18T17:11:09</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxMULTI</display-name>
+			</node>
+			<link>
+				<node type="logical-router">
+					<name>default-domain:admin:SGWvxMULTI</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-logical-router" />
+			</link>
+			<node type="network-ipam">
+				<name>default-domain:admin:space</name>
+				<ipam-subnet-method>user-defined-subnet</ipam-subnet-method>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>4954327396804150509</uuid-mslong>
+						<uuid-lslong>11319857201308702319</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:10:54</created>
+					<last-modified>2025-11-18T17:10:54</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>space</display-name>
+			</node>
+			<link>
+				<node type="virtual-network-network-ipam">
+					<name>attr(default-domain:admin:public,default-domain:admin:space)</name>
+				</node>
+				<node type="network-ipam">
+					<name>default-domain:admin:space</name>
+				</node>
+				<metadata type="virtual-network-network-ipam" />
+			</link>
+			<node type="virtual-machine-interface">
+				<name>default-domain:admin:SGWvxlan1-lrVmi</name>
+				<virtual-machine-interface-mac-addresses>
+					<mac-address>02:ce:a7:9d:6b:31</mac-address>
+				</virtual-machine-interface-mac-addresses>
+				<virtual-machine-interface-device-owner>network:router_interface</virtual-machine-interface-device-owner>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>14891043776636669922</uuid-mslong>
+						<uuid-lslong>11001126971822478707</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:08</created>
+					<last-modified>2025-11-18T17:11:08</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxlan1-lrVmi</display-name>
+			</node>
+			<link>
+				<node type="logical-router">
+					<name>default-domain:admin:SGWvxlan1</name>
+				</node>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxlan1-lrVmi</name>
+				</node>
+				<metadata type="logical-router-interface" />
+			</link>
+			<node type="logical-router-virtual-network">
+				<name>attr(default-domain:admin:SGWvxlan1,default-domain:admin:__contrail_lr_internal_vn_59c83ca3-306a-4629-9682-f39d96d9b0c7__)</name>
+				<value>
+					<logical-router-virtual-network-type>InternalVirtualNetwork</logical-router-virtual-network-type>
+				</value>
+			</node>
+			<link>
+				<node type="logical-router">
+					<name>default-domain:admin:SGWvxlan1</name>
+				</node>
+				<node type="logical-router-virtual-network">
+					<name>attr(default-domain:admin:SGWvxlan1,default-domain:admin:__contrail_lr_internal_vn_59c83ca3-306a-4629-9682-f39d96d9b0c7__)</name>
+				</node>
+				<metadata type="logical-router-virtual-network" />
+			</link>
+			<node type="virtual-machine-interface">
+				<name>default-domain:admin:SGWvxlan2-lrVmi</name>
+				<virtual-machine-interface-mac-addresses>
+					<mac-address>02:f7:12:b0:a3:1b</mac-address>
+				</virtual-machine-interface-mac-addresses>
+				<virtual-machine-interface-device-owner>network:router_interface</virtual-machine-interface-device-owner>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>17803486491530972972</uuid-mslong>
+						<uuid-lslong>13119672952337367956</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:08</created>
+					<last-modified>2025-11-18T17:11:08</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxlan2-lrVmi</display-name>
+			</node>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
+1767710428156184 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 5584 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<link>
+				<node type="logical-router">
+					<name>default-domain:admin:SGWvxlan2</name>
+				</node>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxlan2-lrVmi</name>
+				</node>
+				<metadata type="logical-router-interface" />
+			</link>
+			<node type="logical-router-virtual-network">
+				<name>attr(default-domain:admin:SGWvxlan2,default-domain:admin:__contrail_lr_internal_vn_c1cb1559-a835-40c5-9b33-e58cedc73df7__)</name>
+				<value>
+					<logical-router-virtual-network-type>InternalVirtualNetwork</logical-router-virtual-network-type>
+				</value>
+			</node>
+			<link>
+				<node type="logical-router">
+					<name>default-domain:admin:SGWvxlan2</name>
+				</node>
+				<node type="logical-router-virtual-network">
+					<name>attr(default-domain:admin:SGWvxlan2,default-domain:admin:__contrail_lr_internal_vn_c1cb1559-a835-40c5-9b33-e58cedc73df7__)</name>
+				</node>
+				<metadata type="logical-router-virtual-network" />
+			</link>
+			<node type="virtual-machine-interface">
+				<name>default-domain:admin:SGWvxMULTI2-lrVmi</name>
+				<virtual-machine-interface-mac-addresses>
+					<mac-address>02:dd:9e:d4:e6:18</mac-address>
+				</virtual-machine-interface-mac-addresses>
+				<virtual-machine-interface-device-owner>network:router_interface</virtual-machine-interface-device-owner>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>15969435413426817137</uuid-mslong>
+						<uuid-lslong>11458487785042197873</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:08</created>
+					<last-modified>2025-11-18T17:11:08</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxMULTI2-lrVmi</display-name>
+			</node>
+			<link>
+				<node type="logical-router">
+					<name>default-domain:admin:SGWvxMULTI</name>
+				</node>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxMULTI2-lrVmi</name>
+				</node>
+				<metadata type="logical-router-interface" />
+			</link>
+			<node type="virtual-machine-interface">
+				<name>default-domain:admin:SGWvxMULTI1-lrVmi</name>
+				<virtual-machine-interface-mac-addresses>
+					<mac-address>02:df:47:a4:28:f5</mac-address>
+				</virtual-machine-interface-mac-addresses>
+				<virtual-machine-interface-device-owner>network:router_interface</virtual-machine-interface-device-owner>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>16089008689622369916</uuid-mslong>
+						<uuid-lslong>13120673666689984752</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:08</created>
+					<last-modified>2025-11-18T17:11:08</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxMULTI1-lrVmi</display-name>
+			</node>
+			<link>
+				<node type="logical-router">
+					<name>default-domain:admin:SGWvxMULTI</name>
+				</node>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxMULTI1-lrVmi</name>
+				</node>
+				<metadata type="logical-router-interface" />
+			</link>
+			<node type="logical-router-virtual-network">
+				<name>attr(default-domain:admin:SGWvxMULTI,default-domain:admin:__contrail_lr_internal_vn_e8e60354-fceb-42a5-aec5-b8a199f57bf1__)</name>
+				<value>
+					<logical-router-virtual-network-type>InternalVirtualNetwork</logical-router-virtual-network-type>
+				</value>
+			</node>
+			<link>
+				<node type="logical-router">
+					<name>default-domain:admin:SGWvxMULTI</name>
+				</node>
+				<node type="logical-router-virtual-network">
+					<name>attr(default-domain:admin:SGWvxMULTI,default-domain:admin:__contrail_lr_internal_vn_e8e60354-fceb-42a5-aec5-b8a199f57bf1__)</name>
+				</node>
+				<metadata type="logical-router-virtual-network" />
+			</link>
+			<node type="instance-ip">
+				<name>SGWvxlan1-lrIp</name>
+				<instance-ip-address>10.20.10.3</instance-ip-address>
+				<subnet-uuid>9b632516-198d-4d9f-a3b4-6c40c5a6c742</subnet-uuid>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>9423755260916223913</uuid-mslong>
+						<uuid-lslong>11236591182326082595</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:09</created>
+					<last-modified>2025-11-18T17:11:09</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxlan1-lrIp</display-name>
+			</node>
+			<link>
+				<node type="instance-ip">
+					<name>SGWvxlan1-lrIp</name>
+				</node>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxlan1-lrVmi</name>
+				</node>
+				<metadata type="instance-ip-virtual-machine-interface" />
+			</link>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
+1767710428156273 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 6267 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxlan1-lrVmi</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-virtual-machine-interface" />
+			</link>
+			<node type="virtual-machine-interface-routing-instance">
+				<name>attr(default-domain:admin:SGWvxlan1-lrVmi,default-domain:admin:SGWvxlan1:SGWvxlan1)</name>
+				<value>
+					<direction>both</direction>
+					<vlan-tag>0</vlan-tag>
+					<src-mac></src-mac>
+					<dst-mac></dst-mac>
+					<mpls-label>0</mpls-label>
+					<service-chain-address></service-chain-address>
+					<ipv6-service-chain-address></ipv6-service-chain-address>
+					<protocol></protocol>
+				</value>
+			</node>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxlan1-lrVmi</name>
+				</node>
+				<node type="virtual-machine-interface-routing-instance">
+					<name>attr(default-domain:admin:SGWvxlan1-lrVmi,default-domain:admin:SGWvxlan1:SGWvxlan1)</name>
+				</node>
+				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+			<node type="virtual-network">
+				<name>default-domain:admin:SGWvxlan1</name>
+				<virtual-network-network-id>10</virtual-network-network-id>
+				<router-external>true</router-external>
+				<is-shared>true</is-shared>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>13620339626580133440</uuid-mslong>
+						<uuid-lslong>10482779406616373409</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:07</created>
+					<last-modified>2025-11-18T17:11:07</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxlan1</display-name>
+			</node>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxlan1-lrVmi</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxlan1</name>
+				</node>
+				<metadata type="virtual-machine-interface-virtual-network" />
+			</link>
+			<node type="virtual-network">
+				<name>default-domain:admin:__contrail_lr_internal_vn_59c83ca3-306a-4629-9682-f39d96d9b0c7__</name>
+				<virtual-network-category>tenant</virtual-network-category>
+				<virtual-network-properties>
+					<allow-transit>false</allow-transit>
+					<network-id>0</network-id>
+					<vxlan-network-identifier>123110</vxlan-network-identifier>
+					<forwarding-mode>l3</forwarding-mode>
+					<rpf></rpf>
+					<mirror-destination>false</mirror-destination>
+					<max-flows>0</max-flows>
+					<mtu>0</mtu>
+				</virtual-network-properties>
+				<virtual-network-network-id>15</virtual-network-network-id>
+				<is-provider-network>false</is-provider-network>
+				<port-security-enabled>true</port-security-enabled>
+				<fabric-snat>false</fabric-snat>
+				<route-target-list>
+					<route-target>target:64510:123110</route-target>
+				</route-target-list>
+				<is-shared>false</is-shared>
+				<flood-unknown-unicast>false</flood-unknown-unicast>
+				<mac-learning-enabled>false</mac-learning-enabled>
+				<mac-aging-time>300</mac-aging-time>
+				<pbb-evpn-enable>false</pbb-evpn-enable>
+				<pbb-etree-enable>false</pbb-etree-enable>
+				<layer2-control-word>false</layer2-control-word>
+				<igmp-enable>false</igmp-enable>
+				<mac-ip-learning-enable>false</mac-ip-learning-enable>
+				<id-perms>
+					<permissions>
+						<owner>contrail-api</owner>
+						<owner-access>7</owner-access>
+						<group>admin</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>13578746654741254049</uuid-mslong>
+						<uuid-lslong>10432234564829733577</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:09</created>
+					<last-modified>2025-11-18T17:11:09</last-modified>
+					<description></description>
+					<user-visible>false</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>LR::SGWvxlan1</display-name>
+			</node>
+			<link>
+				<node type="logical-router-virtual-network">
+					<name>attr(default-domain:admin:SGWvxlan1,default-domain:admin:__contrail_lr_internal_vn_59c83ca3-306a-4629-9682-f39d96d9b0c7__)</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:__contrail_lr_internal_vn_59c83ca3-306a-4629-9682-f39d96d9b0c7__</name>
+				</node>
+				<metadata type="logical-router-virtual-network" />
+			</link>
+			<node type="instance-ip">
+				<name>SGWvxlan2-lrIp</name>
+				<instance-ip-address>10.20.11.252</instance-ip-address>
+				<subnet-uuid>a02e1fad-00f4-47f8-9c39-7d8ca3aeea5c</subnet-uuid>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>14222859596588009599</uuid-mslong>
+						<uuid-lslong>9267038501127736488</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:08</created>
+					<last-modified>2025-11-18T17:11:08</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxlan2-lrIp</display-name>
+			</node>
+			<link>
+				<node type="instance-ip">
+					<name>SGWvxlan2-lrIp</name>
+				</node>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxlan2-lrVmi</name>
+				</node>
+				<metadata type="instance-ip-virtual-machine-interface" />
+			</link>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxlan2-lrVmi</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-virtual-machine-interface" />
+			</link>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
+1767710428156730 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 6877 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<node type="virtual-machine-interface-routing-instance">
+				<name>attr(default-domain:admin:SGWvxlan2-lrVmi,default-domain:admin:SGWvxlan2:SGWvxlan2)</name>
+				<value>
+					<direction>both</direction>
+					<vlan-tag>0</vlan-tag>
+					<src-mac></src-mac>
+					<dst-mac></dst-mac>
+					<mpls-label>0</mpls-label>
+					<service-chain-address></service-chain-address>
+					<ipv6-service-chain-address></ipv6-service-chain-address>
+					<protocol></protocol>
+				</value>
+			</node>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxlan2-lrVmi</name>
+				</node>
+				<node type="virtual-machine-interface-routing-instance">
+					<name>attr(default-domain:admin:SGWvxlan2-lrVmi,default-domain:admin:SGWvxlan2:SGWvxlan2)</name>
+				</node>
+				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+			<node type="virtual-network">
+				<name>default-domain:admin:SGWvxlan2</name>
+				<virtual-network-network-id>8</virtual-network-network-id>
+				<router-external>true</router-external>
+				<is-shared>true</is-shared>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>4974690318760820892</uuid-mslong>
+						<uuid-lslong>10873289607975532023</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:06</created>
+					<last-modified>2025-11-18T17:11:06</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxlan2</display-name>
+			</node>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxlan2-lrVmi</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxlan2</name>
+				</node>
+				<metadata type="virtual-machine-interface-virtual-network" />
+			</link>
+			<node type="virtual-network">
+				<name>default-domain:admin:__contrail_lr_internal_vn_c1cb1559-a835-40c5-9b33-e58cedc73df7__</name>
+				<virtual-network-category>tenant</virtual-network-category>
+				<virtual-network-properties>
+					<allow-transit>false</allow-transit>
+					<network-id>0</network-id>
+					<vxlan-network-identifier>123111</vxlan-network-identifier>
+					<forwarding-mode>l3</forwarding-mode>
+					<rpf></rpf>
+					<mirror-destination>false</mirror-destination>
+					<max-flows>0</max-flows>
+					<mtu>0</mtu>
+				</virtual-network-properties>
+				<virtual-network-network-id>13</virtual-network-network-id>
+				<is-provider-network>false</is-provider-network>
+				<port-security-enabled>true</port-security-enabled>
+				<fabric-snat>false</fabric-snat>
+				<route-target-list>
+					<route-target>target:64510:123111</route-target>
+				</route-target-list>
+				<is-shared>false</is-shared>
+				<flood-unknown-unicast>false</flood-unknown-unicast>
+				<mac-learning-enabled>false</mac-learning-enabled>
+				<mac-aging-time>300</mac-aging-time>
+				<pbb-evpn-enable>false</pbb-evpn-enable>
+				<pbb-etree-enable>false</pbb-etree-enable>
+				<layer2-control-word>false</layer2-control-word>
+				<igmp-enable>false</igmp-enable>
+				<mac-ip-learning-enable>false</mac-ip-learning-enable>
+				<id-perms>
+					<permissions>
+						<owner>contrail-api</owner>
+						<owner-access>7</owner-access>
+						<group>admin</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>6058300799775950510</uuid-mslong>
+						<uuid-lslong>11812273076801929384</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:08</created>
+					<last-modified>2025-11-18T17:11:08</last-modified>
+					<description></description>
+					<user-visible>false</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>LR::SGWvxlan2</display-name>
+			</node>
+			<link>
+				<node type="logical-router-virtual-network">
+					<name>attr(default-domain:admin:SGWvxlan2,default-domain:admin:__contrail_lr_internal_vn_c1cb1559-a835-40c5-9b33-e58cedc73df7__)</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:__contrail_lr_internal_vn_c1cb1559-a835-40c5-9b33-e58cedc73df7__</name>
+				</node>
+				<metadata type="logical-router-virtual-network" />
+			</link>
+			<node type="instance-ip">
+				<name>SGWvxMULTI2-lrIp</name>
+				<instance-ip-address>10.20.255.3</instance-ip-address>
+				<subnet-uuid>a82104e2-3bd4-4dc4-9d67-bc96a91637f5</subnet-uuid>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>2436361705902261769</uuid-mslong>
+						<uuid-lslong>12630988647831222666</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:08</created>
+					<last-modified>2025-11-18T17:11:08</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxMULTI2-lrIp</display-name>
+			</node>
+			<link>
+				<node type="instance-ip">
+					<name>SGWvxMULTI2-lrIp</name>
+				</node>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxMULTI2-lrVmi</name>
+				</node>
+				<metadata type="instance-ip-virtual-machine-interface" />
+			</link>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxMULTI2-lrVmi</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-virtual-machine-interface" />
+			</link>
+			<node type="virtual-machine-interface-routing-instance">
+				<name>attr(default-domain:admin:SGWvxMULTI2-lrVmi,default-domain:admin:SGWvxMULTI2:SGWvxMULTI2)</name>
+				<value>
+					<direction>both</direction>
+					<vlan-tag>0</vlan-tag>
+					<src-mac></src-mac>
+					<dst-mac></dst-mac>
+					<mpls-label>0</mpls-label>
+					<service-chain-address></service-chain-address>
+					<ipv6-service-chain-address></ipv6-service-chain-address>
+					<protocol></protocol>
+				</value>
+			</node>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxMULTI2-lrVmi</name>
+				</node>
+				<node type="virtual-machine-interface-routing-instance">
+					<name>attr(default-domain:admin:SGWvxMULTI2-lrVmi,default-domain:admin:SGWvxMULTI2:SGWvxMULTI2)</name>
+				</node>
+				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
+1767710428156813 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 7128 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<node type="virtual-network">
+				<name>default-domain:admin:SGWvxMULTI2</name>
+				<virtual-network-network-id>9</virtual-network-network-id>
+				<is-shared>true</is-shared>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>15306665256419478668</uuid-mslong>
+						<uuid-lslong>12252297975118852771</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:07</created>
+					<last-modified>2025-11-18T17:11:07</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxMULTI2</display-name>
+			</node>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxMULTI2-lrVmi</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxMULTI2</name>
+				</node>
+				<metadata type="virtual-machine-interface-virtual-network" />
+			</link>
+			<node type="instance-ip">
+				<name>SGWvxMULTI1-lrIp</name>
+				<instance-ip-address>10.20.254.3</instance-ip-address>
+				<subnet-uuid>ba2aae30-c817-4259-bf10-3c9710249edf</subnet-uuid>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>15122762462796399073</uuid-mslong>
+						<uuid-lslong>13025018530744210024</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:08</created>
+					<last-modified>2025-11-18T17:11:08</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxMULTI1-lrIp</display-name>
+			</node>
+			<link>
+				<node type="instance-ip">
+					<name>SGWvxMULTI1-lrIp</name>
+				</node>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxMULTI1-lrVmi</name>
+				</node>
+				<metadata type="instance-ip-virtual-machine-interface" />
+			</link>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxMULTI1-lrVmi</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-virtual-machine-interface" />
+			</link>
+			<node type="virtual-machine-interface-routing-instance">
+				<name>attr(default-domain:admin:SGWvxMULTI1-lrVmi,default-domain:admin:SGWvxMULTI1:SGWvxMULTI1)</name>
+				<value>
+					<direction>both</direction>
+					<vlan-tag>0</vlan-tag>
+					<src-mac></src-mac>
+					<dst-mac></dst-mac>
+					<mpls-label>0</mpls-label>
+					<service-chain-address></service-chain-address>
+					<ipv6-service-chain-address></ipv6-service-chain-address>
+					<protocol></protocol>
+				</value>
+			</node>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxMULTI1-lrVmi</name>
+				</node>
+				<node type="virtual-machine-interface-routing-instance">
+					<name>attr(default-domain:admin:SGWvxMULTI1-lrVmi,default-domain:admin:SGWvxMULTI1:SGWvxMULTI1)</name>
+				</node>
+				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+			<node type="virtual-network">
+				<name>default-domain:admin:SGWvxMULTI1</name>
+				<virtual-network-network-id>7</virtual-network-network-id>
+				<is-shared>true</is-shared>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>1862482264938401563</uuid-mslong>
+						<uuid-lslong>10513491416239547144</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:06</created>
+					<last-modified>2025-11-18T17:11:06</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxMULTI1</display-name>
+			</node>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:SGWvxMULTI1-lrVmi</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxMULTI1</name>
+				</node>
+				<metadata type="virtual-machine-interface-virtual-network" />
+			</link>
+			<node type="virtual-network">
+				<name>default-domain:admin:__contrail_lr_internal_vn_e8e60354-fceb-42a5-aec5-b8a199f57bf1__</name>
+				<virtual-network-category>tenant</virtual-network-category>
+				<virtual-network-properties>
+					<allow-transit>false</allow-transit>
+					<network-id>0</network-id>
+					<vxlan-network-identifier>123211</vxlan-network-identifier>
+					<forwarding-mode>l3</forwarding-mode>
+					<rpf></rpf>
+					<mirror-destination>false</mirror-destination>
+					<max-flows>0</max-flows>
+					<mtu>0</mtu>
+				</virtual-network-properties>
+				<virtual-network-network-id>14</virtual-network-network-id>
+				<is-provider-network>false</is-provider-network>
+				<port-security-enabled>true</port-security-enabled>
+				<fabric-snat>false</fabric-snat>
+				<route-target-list>
+					<route-target>target:64510:123211</route-target>
+				</route-target-list>
+				<is-shared>false</is-shared>
+				<flood-unknown-unicast>false</flood-unknown-unicast>
+				<mac-learning-enabled>false</mac-learning-enabled>
+				<mac-aging-time>300</mac-aging-time>
+				<pbb-evpn-enable>false</pbb-evpn-enable>
+				<pbb-etree-enable>false</pbb-etree-enable>
+				<layer2-control-word>false</layer2-control-word>
+				<igmp-enable>false</igmp-enable>
+				<mac-ip-learning-enable>false</mac-ip-learning-enable>
+				<id-perms>
+					<permissions>
+						<owner>contrail-api</owner>
+						<owner-access>7</owner-access>
+						<group>admin</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>8597100523482532765</uuid-mslong>
+						<uuid-lslong>11836117870865784176</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:09</created>
+					<last-modified>2025-11-18T17:11:09</last-modified>
+					<description></description>
+					<user-visible>false</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>LR::SGWvxMULTI</display-name>
+			</node>
+			<link>
+				<node type="logical-router-virtual-network">
+					<name>attr(default-domain:admin:SGWvxMULTI,default-domain:admin:__contrail_lr_internal_vn_e8e60354-fceb-42a5-aec5-b8a199f57bf1__)</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:__contrail_lr_internal_vn_e8e60354-fceb-42a5-aec5-b8a199f57bf1__</name>
+				</node>
+				<metadata type="logical-router-virtual-network" />
+			</link>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
+1767710428157166 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 14400 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<link>
+				<node type="instance-ip">
+					<name>SGWvxlan1-lrIp</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxlan1</name>
+				</node>
+				<metadata type="instance-ip-virtual-network" />
+			</link>
+			<node type="routing-instance">
+				<name>default-domain:admin:SGWvxlan1:SGWvxlan1</name>
+				<routing-instance-is-default>true</routing-instance-is-default>
+				<routing-instance-has-pnf>false</routing-instance-has-pnf>
+				<routing-instance-fabric-snat>false</routing-instance-fabric-snat>
+			</node>
+			<link>
+				<node type="virtual-machine-interface-routing-instance">
+					<name>attr(default-domain:admin:SGWvxlan1-lrVmi,default-domain:admin:SGWvxlan1:SGWvxlan1)</name>
+				</node>
+				<node type="routing-instance">
+					<name>default-domain:admin:SGWvxlan1:SGWvxlan1</name>
+				</node>
+				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxlan1</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-virtual-network" />
+			</link>
+			<node type="access-control-list">
+				<name>default-domain:admin:SGWvxlan1:SGWvxlan1</name>
+				<access-control-list-entries>
+					<dynamic>false</dynamic>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix>0.0.0.0</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix>0.0.0.0</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>8f9b7446-93d6-4a69-972a-cb09be041cbd</rule-uuid>
+						<direction>&lt;&gt;</direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix>::</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix>::</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>041aba64-555e-4379-b6c7-07f6f627e324</rule-uuid>
+						<direction>&lt;&gt;</direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:admin:SGWvxlan1</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:admin:SGWvxlan1</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>00000000-0000-0000-0000-100000000001</rule-uuid>
+						<direction></direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>any</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>any</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>00000000-0000-0000-0000-100000000001</rule-uuid>
+						<direction></direction>
+					</acl-rule>
+				</access-control-list-entries>
+				<access-control-list-hash>0</access-control-list-hash>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>3558697055260459091</uuid-mslong>
+						<uuid-lslong>12481986905582664477</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:07</created>
+					<last-modified>2025-12-29T09:34:49</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxlan1</display-name>
+			</node>
+			<link>
+				<node type="access-control-list">
+					<name>default-domain:admin:SGWvxlan1:SGWvxlan1</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxlan1</name>
+				</node>
+				<metadata type="virtual-network-access-control-list" />
+			</link>
+			<node type="virtual-network-network-ipam">
+				<name>attr(default-domain:admin:SGW,default-domain:admin:SGWvxlan1)</name>
+				<value>
+					<ipam-subnets>
+						<subnet>
+							<ip-prefix>10.20.10.0</ip-prefix>
+							<ip-prefix-len>24</ip-prefix-len>
+						</subnet>
+						<default-gateway>10.20.10.1</default-gateway>
+						<dns-server-address>10.20.10.2</dns-server-address>
+						<subnet-uuid>9b632516-198d-4d9f-a3b4-6c40c5a6c742</subnet-uuid>
+						<enable-dhcp>true</enable-dhcp>
+						<addr_from_start>true</addr_from_start>
+						<dhcp-option-list />
+						<host-routes>
+							<route>
+								<prefix>169.254.169.254/32</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+							<route>
+								<prefix>10.255.255.0/24</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+							<route>
+								<prefix>172.16.0.57/32</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+							<route>
+								<prefix>172.16.0.19/32</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+						</host-routes>
+						<subnet-name>SGWvxlan1-v4</subnet-name>
+						<alloc-unit>1</alloc-unit>
+						<created>1970-01-01T00:00:00</created>
+						<last-modified>1970-01-01T00:00:00</last-modified>
+						<subscriber-tag></subscriber-tag>
+						<vlan-tag>0</vlan-tag>
+					</ipam-subnets>
+					<ipam-subnets>
+						<subnet>
+							<ip-prefix>fd38::</ip-prefix>
+							<ip-prefix-len>64</ip-prefix-len>
+						</subnet>
+						<default-gateway>fd38::1</default-gateway>
+						<dns-server-address>fd38::2</dns-server-address>
+						<subnet-uuid>d750259d-e8d7-4c39-9129-f0a2ef6bbdce</subnet-uuid>
+						<enable-dhcp>true</enable-dhcp>
+						<addr_from_start>true</addr_from_start>
+						<dhcp-option-list />
+						<host-routes />
+						<subnet-name>SGWvxlan1-v6</subnet-name>
+						<alloc-unit>1</alloc-unit>
+						<created>1970-01-01T00:00:00</created>
+						<last-modified>1970-01-01T00:00:00</last-modified>
+						<subscriber-tag></subscriber-tag>
+						<vlan-tag>0</vlan-tag>
+					</ipam-subnets>
+					<host-routes />
+				</value>
+			</node>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxlan1</name>
+				</node>
+				<node type="virtual-network-network-ipam">
+					<name>attr(default-domain:admin:SGW,default-domain:admin:SGWvxlan1)</name>
+				</node>
+				<metadata type="virtual-network-network-ipam" />
+			</link>
+			<link>
+				<node type="routing-instance">
+					<name>default-domain:admin:SGWvxlan1:SGWvxlan1</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxlan1</name>
+				</node>
+				<metadata type="virtual-network-routing-instance" />
+			</link>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:admin:__contrail_lr_internal_vn_59c83ca3-306a-4629-9682-f39d96d9b0c7__</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-virtual-network" />
+			</link>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
+1767710428157867 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 13980 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<node type="routing-instance">
+				<name>default-domain:admin:__contrail_lr_internal_vn_59c83ca3-306a-4629-9682-f39d96d9b0c7__:__contrail_lr_internal_vn_59c83ca3-306a-4629-9682-f39d96d9b0c7__</name>
+				<routing-instance-is-default>true</routing-instance-is-default>
+				<routing-instance-has-pnf>false</routing-instance-has-pnf>
+				<routing-instance-fabric-snat>false</routing-instance-fabric-snat>
+			</node>
+			<link>
+				<node type="routing-instance">
+					<name>default-domain:admin:__contrail_lr_internal_vn_59c83ca3-306a-4629-9682-f39d96d9b0c7__:__contrail_lr_internal_vn_59c83ca3-306a-4629-9682-f39d96d9b0c7__</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:__contrail_lr_internal_vn_59c83ca3-306a-4629-9682-f39d96d9b0c7__</name>
+				</node>
+				<metadata type="virtual-network-routing-instance" />
+			</link>
+			<link>
+				<node type="instance-ip">
+					<name>SGWvxlan2-lrIp</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxlan2</name>
+				</node>
+				<metadata type="instance-ip-virtual-network" />
+			</link>
+			<node type="routing-instance">
+				<name>default-domain:admin:SGWvxlan2:SGWvxlan2</name>
+				<routing-instance-is-default>true</routing-instance-is-default>
+				<routing-instance-has-pnf>false</routing-instance-has-pnf>
+				<routing-instance-fabric-snat>false</routing-instance-fabric-snat>
+			</node>
+			<link>
+				<node type="virtual-machine-interface-routing-instance">
+					<name>attr(default-domain:admin:SGWvxlan2-lrVmi,default-domain:admin:SGWvxlan2:SGWvxlan2)</name>
+				</node>
+				<node type="routing-instance">
+					<name>default-domain:admin:SGWvxlan2:SGWvxlan2</name>
+				</node>
+				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxlan2</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-virtual-network" />
+			</link>
+			<node type="access-control-list">
+				<name>default-domain:admin:SGWvxlan2:SGWvxlan2</name>
+				<access-control-list-entries>
+					<dynamic>false</dynamic>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix>0.0.0.0</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix>0.0.0.0</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>8f9b7446-93d6-4a69-972a-cb09be041cbd</rule-uuid>
+						<direction>&lt;&gt;</direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix>::</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix>::</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>041aba64-555e-4379-b6c7-07f6f627e324</rule-uuid>
+						<direction>&lt;&gt;</direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:admin:SGWvxlan2</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:admin:SGWvxlan2</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>00000000-0000-0000-0000-100000000001</rule-uuid>
+						<direction></direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>any</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>any</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>00000000-0000-0000-0000-100000000001</rule-uuid>
+						<direction></direction>
+					</acl-rule>
+				</access-control-list-entries>
+				<access-control-list-hash>0</access-control-list-hash>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>375643907078112056</uuid-mslong>
+						<uuid-lslong>13830247155566598937</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:06</created>
+					<last-modified>2025-12-29T09:34:49</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxlan2</display-name>
+			</node>
+			<link>
+				<node type="access-control-list">
+					<name>default-domain:admin:SGWvxlan2:SGWvxlan2</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxlan2</name>
+				</node>
+				<metadata type="virtual-network-access-control-list" />
+			</link>
+			<node type="virtual-network-network-ipam">
+				<name>attr(default-domain:admin:SGW,default-domain:admin:SGWvxlan2)</name>
+				<value>
+					<ipam-subnets>
+						<subnet>
+							<ip-prefix>10.20.11.0</ip-prefix>
+							<ip-prefix-len>24</ip-prefix-len>
+						</subnet>
+						<default-gateway>10.20.11.254</default-gateway>
+						<dns-server-address>10.20.11.253</dns-server-address>
+						<subnet-uuid>a02e1fad-00f4-47f8-9c39-7d8ca3aeea5c</subnet-uuid>
+						<enable-dhcp>true</enable-dhcp>
+						<addr_from_start>false</addr_from_start>
+						<dhcp-option-list />
+						<host-routes>
+							<route>
+								<prefix>169.254.169.254/32</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+							<route>
+								<prefix>10.255.255.0/24</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+							<route>
+								<prefix>172.16.0.57/32</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+							<route>
+								<prefix>172.16.0.19/32</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+						</host-routes>
+						<subnet-name>SGWmpls1-v4</subnet-name>
+						<alloc-unit>1</alloc-unit>
+						<created>1970-01-01T00:00:00</created>
+						<last-modified>1970-01-01T00:00:00</last-modified>
+						<subscriber-tag></subscriber-tag>
+						<vlan-tag>0</vlan-tag>
+					</ipam-subnets>
+					<host-routes />
+				</value>
+			</node>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxlan2</name>
+				</node>
+				<node type="virtual-network-network-ipam">
+					<name>attr(default-domain:admin:SGW,default-domain:admin:SGWvxlan2)</name>
+				</node>
+				<metadata type="virtual-network-network-ipam" />
+			</link>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
+1767710428158148 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 12632 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<link>
+				<node type="routing-instance">
+					<name>default-domain:admin:SGWvxlan2:SGWvxlan2</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxlan2</name>
+				</node>
+				<metadata type="virtual-network-routing-instance" />
+			</link>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:admin:__contrail_lr_internal_vn_c1cb1559-a835-40c5-9b33-e58cedc73df7__</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-virtual-network" />
+			</link>
+			<node type="routing-instance">
+				<name>default-domain:admin:__contrail_lr_internal_vn_c1cb1559-a835-40c5-9b33-e58cedc73df7__:__contrail_lr_internal_vn_c1cb1559-a835-40c5-9b33-e58cedc73df7__</name>
+				<routing-instance-is-default>true</routing-instance-is-default>
+				<routing-instance-has-pnf>false</routing-instance-has-pnf>
+				<routing-instance-fabric-snat>false</routing-instance-fabric-snat>
+			</node>
+			<link>
+				<node type="routing-instance">
+					<name>default-domain:admin:__contrail_lr_internal_vn_c1cb1559-a835-40c5-9b33-e58cedc73df7__:__contrail_lr_internal_vn_c1cb1559-a835-40c5-9b33-e58cedc73df7__</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:__contrail_lr_internal_vn_c1cb1559-a835-40c5-9b33-e58cedc73df7__</name>
+				</node>
+				<metadata type="virtual-network-routing-instance" />
+			</link>
+			<link>
+				<node type="instance-ip">
+					<name>SGWvxMULTI2-lrIp</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxMULTI2</name>
+				</node>
+				<metadata type="instance-ip-virtual-network" />
+			</link>
+			<node type="routing-instance">
+				<name>default-domain:admin:SGWvxMULTI2:SGWvxMULTI2</name>
+				<routing-instance-is-default>true</routing-instance-is-default>
+				<routing-instance-has-pnf>false</routing-instance-has-pnf>
+				<routing-instance-fabric-snat>false</routing-instance-fabric-snat>
+			</node>
+			<link>
+				<node type="virtual-machine-interface-routing-instance">
+					<name>attr(default-domain:admin:SGWvxMULTI2-lrVmi,default-domain:admin:SGWvxMULTI2:SGWvxMULTI2)</name>
+				</node>
+				<node type="routing-instance">
+					<name>default-domain:admin:SGWvxMULTI2:SGWvxMULTI2</name>
+				</node>
+				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxMULTI2</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-virtual-network" />
+			</link>
+			<node type="access-control-list">
+				<name>default-domain:admin:SGWvxMULTI2:SGWvxMULTI2</name>
+				<access-control-list-entries>
+					<dynamic>false</dynamic>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix>0.0.0.0</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix>0.0.0.0</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>8f9b7446-93d6-4a69-972a-cb09be041cbd</rule-uuid>
+						<direction>&lt;&gt;</direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix>::</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix>::</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>041aba64-555e-4379-b6c7-07f6f627e324</rule-uuid>
+						<direction>&lt;&gt;</direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:admin:SGWvxMULTI2</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:admin:SGWvxMULTI2</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>00000000-0000-0000-0000-100000000001</rule-uuid>
+						<direction></direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>any</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>any</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>00000000-0000-0000-0000-100000000001</rule-uuid>
+						<direction></direction>
+					</acl-rule>
+				</access-control-list-entries>
+				<access-control-list-hash>0</access-control-list-hash>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>4095311376925936916</uuid-mslong>
+						<uuid-lslong>9834785916599676487</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:07</created>
+					<last-modified>2025-12-29T09:34:49</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxMULTI2</display-name>
+			</node>
+			<link>
+				<node type="access-control-list">
+					<name>default-domain:admin:SGWvxMULTI2:SGWvxMULTI2</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxMULTI2</name>
+				</node>
+				<metadata type="virtual-network-access-control-list" />
+			</link>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
+1767710428158530 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 15466 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<node type="virtual-network-network-ipam">
+				<name>attr(default-domain:admin:SGW,default-domain:admin:SGWvxMULTI2)</name>
+				<value>
+					<ipam-subnets>
+						<subnet>
+							<ip-prefix>10.20.255.0</ip-prefix>
+							<ip-prefix-len>24</ip-prefix-len>
+						</subnet>
+						<default-gateway>10.20.255.1</default-gateway>
+						<dns-server-address>10.20.255.2</dns-server-address>
+						<subnet-uuid>a82104e2-3bd4-4dc4-9d67-bc96a91637f5</subnet-uuid>
+						<enable-dhcp>true</enable-dhcp>
+						<addr_from_start>true</addr_from_start>
+						<dhcp-option-list />
+						<host-routes>
+							<route>
+								<prefix>169.254.169.254/32</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+							<route>
+								<prefix>10.255.255.0/24</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+							<route>
+								<prefix>10.20.254.0/23</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+							<route>
+								<prefix>172.16.0.57/32</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+							<route>
+								<prefix>172.16.0.19/32</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+						</host-routes>
+						<subnet-name>SGWvxMULTI2-v4</subnet-name>
+						<alloc-unit>1</alloc-unit>
+						<created>1970-01-01T00:00:00</created>
+						<last-modified>1970-01-01T00:00:00</last-modified>
+						<subscriber-tag></subscriber-tag>
+						<vlan-tag>0</vlan-tag>
+					</ipam-subnets>
+					<host-routes />
+				</value>
+			</node>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxMULTI2</name>
+				</node>
+				<node type="virtual-network-network-ipam">
+					<name>attr(default-domain:admin:SGW,default-domain:admin:SGWvxMULTI2)</name>
+				</node>
+				<metadata type="virtual-network-network-ipam" />
+			</link>
+			<link>
+				<node type="routing-instance">
+					<name>default-domain:admin:SGWvxMULTI2:SGWvxMULTI2</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxMULTI2</name>
+				</node>
+				<metadata type="virtual-network-routing-instance" />
+			</link>
+			<link>
+				<node type="instance-ip">
+					<name>SGWvxMULTI1-lrIp</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxMULTI1</name>
+				</node>
+				<metadata type="instance-ip-virtual-network" />
+			</link>
+			<node type="routing-instance">
+				<name>default-domain:admin:SGWvxMULTI1:SGWvxMULTI1</name>
+				<routing-instance-is-default>true</routing-instance-is-default>
+				<routing-instance-has-pnf>false</routing-instance-has-pnf>
+				<routing-instance-fabric-snat>false</routing-instance-fabric-snat>
+			</node>
+			<link>
+				<node type="virtual-machine-interface-routing-instance">
+					<name>attr(default-domain:admin:SGWvxMULTI1-lrVmi,default-domain:admin:SGWvxMULTI1:SGWvxMULTI1)</name>
+				</node>
+				<node type="routing-instance">
+					<name>default-domain:admin:SGWvxMULTI1:SGWvxMULTI1</name>
+				</node>
+				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxMULTI1</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-virtual-network" />
+			</link>
+			<node type="access-control-list">
+				<name>default-domain:admin:SGWvxMULTI1:SGWvxMULTI1</name>
+				<access-control-list-entries>
+					<dynamic>false</dynamic>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix>0.0.0.0</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix>0.0.0.0</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>8f9b7446-93d6-4a69-972a-cb09be041cbd</rule-uuid>
+						<direction>&lt;&gt;</direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix>::</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix>::</ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network></virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>-1</start-port>
+								<end-port>-1</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>041aba64-555e-4379-b6c7-07f6f627e324</rule-uuid>
+						<direction>&lt;&gt;</direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:admin:SGWvxMULTI1</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>default-domain:admin:SGWvxMULTI1</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>00000000-0000-0000-0000-100000000001</rule-uuid>
+						<direction></direction>
+					</acl-rule>
+					<acl-rule>
+						<match-condition>
+							<protocol>any</protocol>
+							<src-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>any</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</src-address>
+							<src-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</src-port>
+							<dst-address>
+								<subnet>
+									<ip-prefix></ip-prefix>
+									<ip-prefix-len>0</ip-prefix-len>
+								</subnet>
+								<virtual-network>any</virtual-network>
+								<security-group></security-group>
+								<network-policy></network-policy>
+							</dst-address>
+							<dst-port>
+								<start-port>0</start-port>
+								<end-port>65535</end-port>
+							</dst-port>
+							<ethertype></ethertype>
+						</match-condition>
+						<action-list>
+							<simple-action>pass</simple-action>
+							<gateway-name></gateway-name>
+							<service-properties>
+								<retain-as-path>false</retain-as-path>
+							</service-properties>
+							<mirror-to>
+								<analyzer-name></analyzer-name>
+								<encapsulation></encapsulation>
+								<analyzer-ip-address></analyzer-ip-address>
+								<analyzer-mac-address></analyzer-mac-address>
+								<routing-instance></routing-instance>
+								<udp-port>0</udp-port>
+								<juniper-header>true</juniper-header>
+								<nh-mode></nh-mode>
+								<static-nh-header>
+									<vtep-dst-ip-address></vtep-dst-ip-address>
+									<vtep-dst-mac-address></vtep-dst-mac-address>
+									<vni>0</vni>
+								</static-nh-header>
+								<nic-assisted-mirroring>false</nic-assisted-mirroring>
+								<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+							</mirror-to>
+							<assign-routing-instance></assign-routing-instance>
+							<log>false</log>
+							<alert>false</alert>
+							<qos-action></qos-action>
+							<host-based-service>false</host-based-service>
+						</action-list>
+						<rule-uuid>00000000-0000-0000-0000-100000000001</rule-uuid>
+						<direction></direction>
+					</acl-rule>
+				</access-control-list-entries>
+				<access-control-list-hash>0</access-control-list-hash>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>8683044021556168465</uuid-mslong>
+						<uuid-lslong>11141834006852267542</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:06</created>
+					<last-modified>2025-12-29T09:34:49</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGWvxMULTI1</display-name>
+			</node>
+			<link>
+				<node type="access-control-list">
+					<name>default-domain:admin:SGWvxMULTI1:SGWvxMULTI1</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxMULTI1</name>
+				</node>
+				<metadata type="virtual-network-access-control-list" />
+			</link>
+			<node type="virtual-network-network-ipam">
+				<name>attr(default-domain:admin:SGW,default-domain:admin:SGWvxMULTI1)</name>
+				<value>
+					<ipam-subnets>
+						<subnet>
+							<ip-prefix>10.20.254.0</ip-prefix>
+							<ip-prefix-len>24</ip-prefix-len>
+						</subnet>
+						<default-gateway>10.20.254.1</default-gateway>
+						<dns-server-address>10.20.254.2</dns-server-address>
+						<subnet-uuid>ba2aae30-c817-4259-bf10-3c9710249edf</subnet-uuid>
+						<enable-dhcp>true</enable-dhcp>
+						<addr_from_start>true</addr_from_start>
+						<dhcp-option-list />
+						<host-routes>
+							<route>
+								<prefix>169.254.169.254/32</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+							<route>
+								<prefix>10.255.255.0/24</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+							<route>
+								<prefix>10.20.254.0/23</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+							<route>
+								<prefix>172.16.0.57/32</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+							<route>
+								<prefix>172.16.0.19/32</prefix>
+								<next-hop>0.0.0.0</next-hop>
+								<next-hop-type></next-hop-type>
+								<community-attributes />
+							</route>
+						</host-routes>
+						<subnet-name>SGWvxMULTI1-v4</subnet-name>
+						<alloc-unit>1</alloc-unit>
+						<created>1970-01-01T00:00:00</created>
+						<last-modified>1970-01-01T00:00:00</last-modified>
+						<subscriber-tag></subscriber-tag>
+						<vlan-tag>0</vlan-tag>
+					</ipam-subnets>
+					<host-routes />
+				</value>
+			</node>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
+1767710428158587 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 3625 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxMULTI1</name>
+				</node>
+				<node type="virtual-network-network-ipam">
+					<name>attr(default-domain:admin:SGW,default-domain:admin:SGWvxMULTI1)</name>
+				</node>
+				<metadata type="virtual-network-network-ipam" />
+			</link>
+			<link>
+				<node type="routing-instance">
+					<name>default-domain:admin:SGWvxMULTI1:SGWvxMULTI1</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:SGWvxMULTI1</name>
+				</node>
+				<metadata type="virtual-network-routing-instance" />
+			</link>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:admin:__contrail_lr_internal_vn_e8e60354-fceb-42a5-aec5-b8a199f57bf1__</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-virtual-network" />
+			</link>
+			<node type="routing-instance">
+				<name>default-domain:admin:__contrail_lr_internal_vn_e8e60354-fceb-42a5-aec5-b8a199f57bf1__:__contrail_lr_internal_vn_e8e60354-fceb-42a5-aec5-b8a199f57bf1__</name>
+				<routing-instance-is-default>true</routing-instance-is-default>
+				<routing-instance-has-pnf>false</routing-instance-has-pnf>
+				<routing-instance-fabric-snat>false</routing-instance-fabric-snat>
+			</node>
+			<link>
+				<node type="routing-instance">
+					<name>default-domain:admin:__contrail_lr_internal_vn_e8e60354-fceb-42a5-aec5-b8a199f57bf1__:__contrail_lr_internal_vn_e8e60354-fceb-42a5-aec5-b8a199f57bf1__</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:__contrail_lr_internal_vn_e8e60354-fceb-42a5-aec5-b8a199f57bf1__</name>
+				</node>
+				<metadata type="virtual-network-routing-instance" />
+			</link>
+			<node type="network-ipam">
+				<name>default-domain:admin:SGW</name>
+				<ipam-subnet-method>user-defined-subnet</ipam-subnet-method>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>5386083398654183223</uuid-mslong>
+						<uuid-lslong>11286881658743728965</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:06</created>
+					<last-modified>2025-11-18T17:11:06</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>SGW</display-name>
+			</node>
+			<link>
+				<node type="virtual-network-network-ipam">
+					<name>attr(default-domain:admin:SGW,default-domain:admin:SGWvxlan1)</name>
+				</node>
+				<node type="network-ipam">
+					<name>default-domain:admin:SGW</name>
+				</node>
+				<metadata type="virtual-network-network-ipam" />
+			</link>
+			<link>
+				<node type="virtual-network-network-ipam">
+					<name>attr(default-domain:admin:SGW,default-domain:admin:SGWvxlan2)</name>
+				</node>
+				<node type="network-ipam">
+					<name>default-domain:admin:SGW</name>
+				</node>
+				<metadata type="virtual-network-network-ipam" />
+			</link>
+			<link>
+				<node type="virtual-network-network-ipam">
+					<name>attr(default-domain:admin:SGW,default-domain:admin:SGWvxMULTI2)</name>
+				</node>
+				<node type="network-ipam">
+					<name>default-domain:admin:SGW</name>
+				</node>
+				<metadata type="virtual-network-network-ipam" />
+			</link>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
+1767710428158605 AgentXmppMessage: Control-node: 172.16.0.24 Port 5269 Size: 481 Packet: 
+<?xml version="1.0"?>
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute0/config">
+	<config>
+		<update>
+			<link>
+				<node type="virtual-network-network-ipam">
+					<name>attr(default-domain:admin:SGW,default-domain:admin:SGWvxMULTI1)</name>
+				</node>
+				<node type="network-ipam">
+					<name>default-domain:admin:SGW</name>
+				</node>
+				<metadata type="virtual-network-network-ipam" />
+			</link>
+		</update>
+	</config>
+</iq> $ controller/src/vnsw/agent/controller/controller_init.cc 1024
