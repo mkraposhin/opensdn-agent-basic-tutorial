@@ -1,0 +1,189 @@
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute1/config">
+	<config>
+		<update>
+      <node type="virtual-machine">
+				<name>a133d175-f58f-4afe-baa9-3f3ce34df193</name>
+				<server-type>virtual-server</server-type>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>11615858168479828734</uuid-mslong>
+						<uuid-lslong>13450351292862820755</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2026-01-07T10:36:55</created>
+					<last-modified>2026-01-07T10:36:55</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>a133d175-f58f-4afe-baa9-3f3ce34df193</display-name>
+			</node>
+			<node type="virtual-machine-interface">
+				<name>default-domain:new-project:F-port</name>
+				<ecmp-hashing-include-fields>
+					<hashing-configured>false</hashing-configured>
+					<source-ip>true</source-ip>
+					<destination-ip>true</destination-ip>
+					<ip-protocol>true</ip-protocol>
+					<source-port>true</source-port>
+					<destination-port>true</destination-port>
+				</ecmp-hashing-include-fields>
+				<port-security-enabled>true</port-security-enabled>
+				<virtual-machine-interface-mac-addresses>
+					<mac-address>02:81:01:0b:55:bd</mac-address>
+				</virtual-machine-interface-mac-addresses>
+				<virtual-machine-interface-dhcp-option-list />
+				<virtual-machine-interface-allowed-address-pairs />
+				<virtual-machine-interface-device-owner>compute:nova</virtual-machine-interface-device-owner>
+				<virtual-machine-interface-disable-policy>false</virtual-machine-interface-disable-policy>
+				<virtual-machine-interface-properties>
+					<service-interface-type></service-interface-type>
+					<interface-mirror>
+						<traffic-direction></traffic-direction>
+						<mirror-to>
+							<analyzer-name></analyzer-name>
+							<encapsulation></encapsulation>
+							<analyzer-ip-address></analyzer-ip-address>
+							<analyzer-mac-address></analyzer-mac-address>
+							<routing-instance></routing-instance>
+							<udp-port>0</udp-port>
+							<juniper-header>true</juniper-header>
+							<nh-mode></nh-mode>
+							<static-nh-header>
+								<vtep-dst-ip-address></vtep-dst-ip-address>
+								<vtep-dst-mac-address></vtep-dst-mac-address>
+								<vni>0</vni>
+							</static-nh-header>
+							<nic-assisted-mirroring>false</nic-assisted-mirroring>
+							<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+						</mirror-to>
+					</interface-mirror>
+					<local-preference>0</local-preference>
+					<sub-interface-vlan-tag>0</sub-interface-vlan-tag>
+					<max-flows>0</max-flows>
+				</virtual-machine-interface-properties>
+				<virtual-machine-interface-bindings>
+					<key-value-pair>
+						<key>host_id</key>
+						<value>compute1</value>
+					</key-value-pair>
+					<key-value-pair>
+						<key>vnic_type</key>
+						<value>normal</value>
+					</key-value-pair>
+				</virtual-machine-interface-bindings>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>9295723568748383786</uuid-mslong>
+						<uuid-lslong>10929647158827880167</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2026-01-07T10:35:58</created>
+					<last-modified>2026-01-07T10:36:55</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>F-port</display-name>
+			</node>
+			<node type="instance-ip">
+				<name>914610db-866b-4c74-905b-ce483534bde6</name>
+				<instance-ip-address>10.1.6.3</instance-ip-address>
+				<instance-ip-family>v4</instance-ip-family>
+				<subnet-uuid>140e4d6e-e640-4a3f-ad68-1bf507e0c6e0</subnet-uuid>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>10468072918908357748</uuid-mslong>
+						<uuid-lslong>10402134573867908582</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2026-01-07T10:35:58</created>
+					<last-modified>2026-01-07T10:35:58</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>914610db-866b-4c74-905b-ce483534bde6</display-name>
+			</node>
+			<node type="virtual-machine-interface-routing-instance">
+				<name>attr(default-domain:new-project:F-port,default-domain:shared-nets:F:F)</name>
+				<value>
+					<direction>both</direction>
+					<vlan-tag>0</vlan-tag>
+					<src-mac></src-mac>
+					<dst-mac></dst-mac>
+					<mpls-label>0</mpls-label>
+					<service-chain-address></service-chain-address>
+					<ipv6-service-chain-address></ipv6-service-chain-address>
+					<protocol></protocol>
+				</value>
+			</node>
+			<link>
+				<node type="virtual-router">
+					<name>default-global-system-config:compute1</name>
+				</node>
+				<node type="virtual-machine">
+					<name>a133d175-f58f-4afe-baa9-3f3ce34df193</name>
+				</node>
+				<metadata type="virtual-router-virtual-machine" />
+			</link>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:new-project:F-port</name>
+				</node>
+				<node type="virtual-machine">
+					<name>a133d175-f58f-4afe-baa9-3f3ce34df193</name>
+				</node>
+				<metadata type="virtual-machine-interface-virtual-machine" />
+			</link>
+			<link>
+				<node type="instance-ip">
+					<name>914610db-866b-4c74-905b-ce483534bde6</name>
+				</node>
+				<node type="virtual-machine-interface">
+					<name>default-domain:new-project:F-port</name>
+				</node>
+				<metadata type="instance-ip-virtual-machine-interface" />
+			</link>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:new-project:F-port</name>
+				</node>
+				<node type="project">
+					<name>default-domain:new-project</name>
+				</node>
+				<metadata type="project-virtual-machine-interface" />
+			</link>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:new-project:F-port</name>
+				</node>
+				<node type="virtual-machine-interface-routing-instance">
+					<name>attr(default-domain:new-project:F-port,default-domain:shared-nets:F:F)</name>
+				</node>
+				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+		</update>
+	</config>
+</iq>
