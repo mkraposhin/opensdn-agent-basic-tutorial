@@ -161,6 +161,15 @@
 				<node type="instance-ip">
 					<name>914610db-866b-4c74-905b-ce483534bde6</name>
 				</node>
+				<node type="virtual-network">
+					<name>default-domain:shared-nets:F</name>
+				</node>
+				<metadata type="instance-ip-virtual-network" />
+			</link>
+			<link>
+				<node type="instance-ip">
+					<name>914610db-866b-4c74-905b-ce483534bde6</name>
+				</node>
 				<node type="virtual-machine-interface">
 					<name>default-domain:new-project:F-port</name>
 				</node>
@@ -183,6 +192,24 @@
 					<name>attr(default-domain:new-project:F-port,default-domain:shared-nets:F:F)</name>
 				</node>
 				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+			<link>
+				<node type="virtual-machine-interface-routing-instance">
+					<name>attr(default-domain:new-project:F-port,default-domain:shared-nets:F:F)</name>
+				</node>
+				<node type="routing-instance">
+					<name>default-domain:shared-nets:F:F</name>
+				</node>
+				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:new-project:F-port</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:shared-nets:F</name>
+				</node>
+				<metadata type="virtual-machine-interface-virtual-network" />
 			</link>
 		</update>
 	</config>
