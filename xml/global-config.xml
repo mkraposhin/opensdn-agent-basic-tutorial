@@ -1,0 +1,230 @@
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:opensdn-VirtualBox/config">
+	<config>
+		<update>
+			<node type="virtual-router">
+				<name>default-global-system-config:opensdn-VirtualBox</name>
+				<virtual-router-dpdk-enabled>false</virtual-router-dpdk-enabled>
+				<virtual-router-ip-address>10.0.2.15</virtual-router-ip-address>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>13267862157587664583</uuid-mslong>
+						<uuid-lslong>9236547022019350166</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:30:15</created>
+					<last-modified>2025-11-26T10:07:38</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>opensdn-VirtualBox</display-name>
+			</node>
+			<node type="global-system-config">
+				<name>default-global-system-config</name>
+				<autonomous-system>64512</autonomous-system>
+				<enable-4byte-as>false</enable-4byte-as>
+				<config-version>1.0</config-version>
+				<ibgp-auto-mesh>true</ibgp-auto-mesh>
+				<ip-fabric-subnets>
+					<subnet>
+						<ip-prefix>10.0.2.0</ip-prefix>
+						<ip-prefix-len>24</ip-prefix-len>
+					</subnet>
+				</ip-fabric-subnets>
+				<mac-aging-time>300</mac-aging-time>
+				<igmp-enable>false</igmp-enable>
+				<enable-security-policy-draft>false</enable-security-policy-draft>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>8654785006032539582</uuid-mslong>
+						<uuid-lslong>12758875057550270056</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:21:00</created>
+					<last-modified>2025-12-29T09:34:55</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+			</node>
+			<link>
+				<node type="virtual-router">
+					<name>default-global-system-config:opensdn-VirtualBox</name>
+				</node>
+				<node type="global-system-config">
+					<name>default-global-system-config</name>
+				</node>
+				<metadata type="global-system-config-virtual-router" />
+			</link>
+			<node type="virtual-machine-interface">
+				<name>default-global-system-config:opensdn-VirtualBox:vhost0</name>
+				<virtual-machine-interface-mac-addresses>
+					<mac-address>08:00:27:20:f9:ed</mac-address>
+				</virtual-machine-interface-mac-addresses>
+				<virtual-machine-interface-disable-policy>true</virtual-machine-interface-disable-policy>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>0</uuid-mslong>
+						<uuid-lslong>1</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:30:15</created>
+					<last-modified>2025-11-18T16:30:15</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>vhost0</display-name>
+			</node>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-global-system-config:opensdn-VirtualBox:vhost0</name>
+				</node>
+				<node type="virtual-router">
+					<name>default-global-system-config:opensdn-VirtualBox</name>
+				</node>
+				<metadata type="virtual-router-virtual-machine-interface" />
+			</link>
+			<node type="bgp-router">
+				<name>default-domain:default-project:ip-fabric:__default__:network-control</name>
+				<bgp-router-parameters>
+					<admin-down>false</admin-down>
+					<vendor>contrail</vendor>
+					<cluster-id>0</cluster-id>
+					<autonomous-system>64512</autonomous-system>
+					<identifier>10.0.2.15</identifier>
+					<address>10.0.2.15</address>
+					<port>179</port>
+					<source-port>0</source-port>
+					<hold-time>0</hold-time>
+					<address-families>
+						<family>route-target</family>
+						<family>inet-vpn</family>
+						<family>e-vpn</family>
+						<family>erm-vpn</family>
+						<family>inet6-vpn</family>
+					</address-families>
+					<auth-data>
+						<key-type></key-type>
+					</auth-data>
+					<local-autonomous-system>0</local-autonomous-system>
+					<router-type>control-node</router-type>
+					<gateway-address></gateway-address>
+					<ipv6-gateway-address></ipv6-gateway-address>
+				</bgp-router-parameters>
+			</node>
+			<link>
+				<node type="global-system-config">
+					<name>default-global-system-config</name>
+				</node>
+				<node type="bgp-router">
+					<name>default-domain:default-project:ip-fabric:__default__:network-control</name>
+				</node>
+				<metadata type="global-system-config-bgp-router" />
+			</link>
+			<node type="global-qos-config">
+				<name>default-global-system-config:default-global-qos-config</name>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>850259733400143870</uuid-mslong>
+						<uuid-lslong>13661238070064185731</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:21:13</created>
+					<last-modified>2025-11-18T16:21:13</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+			</node>
+			<link>
+				<node type="global-qos-config">
+					<name>default-global-system-config:default-global-qos-config</name>
+				</node>
+				<node type="global-system-config">
+					<name>default-global-system-config</name>
+				</node>
+				<metadata type="global-system-config-global-qos-config" />
+			</link>
+			<node type="global-vrouter-config">
+				<name>default-global-system-config:default-global-vrouter-config</name>
+				<linklocal-services>
+					<linklocal-service-entry>
+						<linklocal-service-name>metadata</linklocal-service-name>
+						<linklocal-service-ip>169.254.169.254</linklocal-service-ip>
+						<linklocal-service-port>80</linklocal-service-port>
+						<ip-fabric-DNS-service-name></ip-fabric-DNS-service-name>
+						<ip-fabric-service-port>8775</ip-fabric-service-port>
+						<ip-fabric-service-ip>10.0.2.15</ip-fabric-service-ip>
+					</linklocal-service-entry>
+				</linklocal-services>
+				<encapsulation-priorities>
+					<encapsulation>MPLSoUDP</encapsulation>
+					<encapsulation>MPLSoGRE</encapsulation>
+					<encapsulation>VXLAN</encapsulation>
+				</encapsulation-priorities>
+				<vxlan-network-identifier-mode>automatic</vxlan-network-identifier-mode>
+				<enable-security-logging>true</enable-security-logging>
+				<encryption-mode>none</encryption-mode>
+				<global-max-vmi-flows>0</global-max-vmi-flows>
+				<max-vm-flows-percent>0</max-vm-flows-percent>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>11393303099947370746</uuid-mslong>
+						<uuid-lslong>9870615863531603204</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T16:21:00</created>
+					<last-modified>2025-12-29T09:34:54</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+			</node>
+			<link>
+				<node type="global-vrouter-config">
+					<name>default-global-system-config:default-global-vrouter-config</name>
+				</node>
+				<node type="global-system-config">
+					<name>default-global-system-config</name>
+				</node>
+				<metadata type="global-system-config-global-vrouter-config" />
+			</link>
+		</update>
+	</config>
+</iq>

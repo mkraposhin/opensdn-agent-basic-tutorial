@@ -1,0 +1,42 @@
+Projects
+--------
+
+default-domain:default-project - 11 ( 00000000-0000-0000-0000-00000000000b )
+default-domain:admin - 12 ( 00000000-0000-0000-0000-00000000000c )
+
+
+Virtual networks
+----------------
+
+default-domain:default-project:ip-fabric - 102 (00000000-0000-0000-0000-000000000066)
+default-domain:admin:vn-A - 103 (00000000-0000-0000-0000-000000000067)
+
+
+Subnet IPAMs
+------------
+
+attr(default-domain:default-project:default-network-ipam,default-domain:admin:A-vn) - 2003 (7d3)
+
+VMs
+---
+
+cont1 - 21 ( 00000000-0000-0000-0000-000000000015 )
+cont2 - 22 ( 00000000-0000-0000-0000-000000000016 )
+
+VMis
+----
+
+default-global-system-config:opensdn-VirtualBox:vhost0 - 1 ( 00000000-0000-0000-0000-000000000001 )
+default-domain:admin:cont1-port - 2 ( 00000000-0000-0000-0000-000000000002 )
+default-domain:admin:cont2-port - 3 ( 00000000-0000-0000-0000-000000000003 )
+
+IIPs
+----
+
+cont1-ip - 3001 ( 00000000-0000-0000-0000-000000000bb9 )
+cont2-ip - 3002 ( 00000000-0000-0000-0000-000000000bba )
+
+ACLs
+----
+
+default-domain:default-project:ip-fabric:ip-fabric -  1002

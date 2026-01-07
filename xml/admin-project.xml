@@ -1,0 +1,138 @@
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:opensdn-VirtualBox/config">
+	<config>
+		<update>
+			<node type="project">
+				<name>default-domain:admin</name>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>0</uuid-mslong>
+						<uuid-lslong>12</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:10:51</created>
+					<last-modified>2025-12-29T13:02:09</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>admin</display-name>
+			</node>
+			<node type="network-ipam">
+				<name>default-domain:admin:space</name>
+				<ipam-subnet-method>user-defined-subnet</ipam-subnet-method>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>4954327396804150509</uuid-mslong>
+						<uuid-lslong>11319857201308702319</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:10:54</created>
+					<last-modified>2025-11-18T17:10:54</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>space</display-name>
+			</node>
+			<node type="virtual-network">
+				<name>default-domain:admin:vn-A</name>
+				<virtual-network-network-id>3</virtual-network-network-id>
+				<router-external>false</router-external>
+				<is-shared>false</is-shared>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>0</uuid-mslong>
+						<uuid-lslong>103</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2025-11-18T17:11:07</created>
+					<last-modified>2025-11-18T17:11:07</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>vn-A</display-name>
+			</node>
+			<node type="routing-instance">
+				<name>default-domain:admin:vn-A:vn-A</name>
+				<routing-instance-is-default>true</routing-instance-is-default>
+				<routing-instance-has-pnf>false</routing-instance-has-pnf>
+				<routing-instance-fabric-snat>false</routing-instance-fabric-snat>
+			</node>
+			<node type="virtual-network-network-ipam">
+				<name>attr(default-domain:admin:A-vn,default-domain:admin:space)</name>
+				<value>
+					<ipam-subnets>
+						<subnet>
+							<ip-prefix>10.10.10.0</ip-prefix>
+							<ip-prefix-len>24</ip-prefix-len>
+						</subnet>
+						<default-gateway>10.10.10.1</default-gateway>
+						<dns-server-address>10.10.10.2</dns-server-address>
+						<subnet-uuid>00000000-0000-0000-0000-0000000007d3</subnet-uuid>
+						<enable-dhcp>true</enable-dhcp>
+						<addr_from_start>true</addr_from_start>
+						<dhcp-option-list />
+						<host-routes />
+						<subnet-name>00000000-0000-0000-0000-0000000007d3</subnet-name>
+						<alloc-unit>1</alloc-unit>
+						<created>1970-01-01T00:00:00</created>
+						<last-modified>1970-01-01T00:00:00</last-modified>
+						<subscriber-tag></subscriber-tag>
+						<vlan-tag>0</vlan-tag>
+					</ipam-subnets>
+					<host-routes />
+				</value>
+			</node>
+			<link>
+				<node type="virtual-network-network-ipam">
+					<name>attr(default-domain:admin:A-vn,default-domain:admin:space)</name>
+				</node>
+				<node type="network-ipam">
+					<name>default-domain:admin:space</name>
+				</node>
+				<metadata type="virtual-network-network-ipam" />
+			</link>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:admin:vn-A</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-virtual-network" />
+			</link>
+			<link>
+				<node type="routing-instance">
+					<name>default-domain:admin:vn-A:vn-A</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:vn-A</name>
+				</node>
+				<metadata type="virtual-network-routing-instance" />
+			</link>
+		</update>
+	</config>
+</iq>
+

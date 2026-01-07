@@ -1,0 +1,216 @@
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute1/config">
+	<config>
+		<update>
+      <node type="virtual-machine">
+				<name>cont1</name>
+				<server-type>container</server-type> <!--was: virtual-server -->
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>0</uuid-mslong>
+						<uuid-lslong>21</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2026-01-07T10:36:55</created>
+					<last-modified>2026-01-07T10:36:55</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>cont1</display-name>
+			</node>
+			<node type="virtual-machine-interface">
+				<name>default-domain:admin:cont1-port</name>
+				<ecmp-hashing-include-fields>
+					<hashing-configured>false</hashing-configured>
+					<source-ip>true</source-ip>
+					<destination-ip>true</destination-ip>
+					<ip-protocol>true</ip-protocol>
+					<source-port>true</source-port>
+					<destination-port>true</destination-port>
+				</ecmp-hashing-include-fields>
+				<port-security-enabled>true</port-security-enabled>
+				<virtual-machine-interface-mac-addresses>
+					<mac-address>7a:ab:8d:0b:4d:06</mac-address>
+				</virtual-machine-interface-mac-addresses>
+				<virtual-machine-interface-dhcp-option-list />
+				<virtual-machine-interface-allowed-address-pairs />
+				<virtual-machine-interface-device-owner>compute</virtual-machine-interface-device-owner> <!-- compute:nova -->
+				<virtual-machine-interface-disable-policy>true</virtual-machine-interface-disable-policy>
+				<virtual-machine-interface-properties>
+					<service-interface-type></service-interface-type>
+					<interface-mirror>
+						<traffic-direction></traffic-direction>
+						<mirror-to>
+							<analyzer-name></analyzer-name>
+							<encapsulation></encapsulation>
+							<analyzer-ip-address></analyzer-ip-address>
+							<analyzer-mac-address></analyzer-mac-address>
+							<routing-instance></routing-instance>
+							<udp-port>0</udp-port>
+							<juniper-header>true</juniper-header>
+							<nh-mode></nh-mode>
+							<static-nh-header>
+								<vtep-dst-ip-address></vtep-dst-ip-address>
+								<vtep-dst-mac-address></vtep-dst-mac-address>
+								<vni>0</vni>
+							</static-nh-header>
+							<nic-assisted-mirroring>false</nic-assisted-mirroring>
+							<nic-assisted-mirroring-vlan>0</nic-assisted-mirroring-vlan>
+						</mirror-to>
+					</interface-mirror>
+					<local-preference>0</local-preference>
+					<sub-interface-vlan-tag>0</sub-interface-vlan-tag>
+					<max-flows>0</max-flows>
+				</virtual-machine-interface-properties>
+				<virtual-machine-interface-bindings>
+					<key-value-pair>
+						<key>host_id</key>
+						<value>opensdn-VirtualBox</value>
+					</key-value-pair>
+					<key-value-pair>
+						<key>vnic_type</key>
+						<value>normal</value>
+					</key-value-pair>
+				</virtual-machine-interface-bindings>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>0</uuid-mslong>
+						<uuid-lslong>2</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2026-01-07T10:35:58</created>
+					<last-modified>2026-01-07T10:36:55</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>cont1-port</display-name>
+			</node>
+			<node type="instance-ip">
+				<name>cont1-ip</name>
+				<instance-ip-address>10.10.10.11</instance-ip-address>
+				<instance-ip-family>v4</instance-ip-family>
+				<subnet-uuid>00000000-0000-0000-0000-0000000007d3</subnet-uuid>
+				<id-perms>
+					<permissions>
+						<owner>cloud-admin</owner>
+						<owner-access>7</owner-access>
+						<group>cloud-admin-group</group>
+						<group-access>7</group-access>
+						<other-access>7</other-access>
+					</permissions>
+					<uuid>
+						<uuid-mslong>0</uuid-mslong>
+						<uuid-lslong>3001</uuid-lslong>
+					</uuid>
+					<enable>true</enable>
+					<created>2026-01-07T10:35:58</created>
+					<last-modified>2026-01-07T10:35:58</last-modified>
+					<description></description>
+					<user-visible>true</user-visible>
+					<creator></creator>
+				</id-perms>
+				<display-name>cont1-ip</display-name>
+			</node>
+			<node type="virtual-machine-interface-routing-instance">
+				<name>attr(default-domain:admin:cont1-port,default-domain:admin:vn-A:vn-A)</name>
+				<value>
+					<direction>both</direction>
+					<vlan-tag>0</vlan-tag>
+					<src-mac></src-mac>
+					<dst-mac></dst-mac>
+					<mpls-label>0</mpls-label>
+					<service-chain-address></service-chain-address>
+					<ipv6-service-chain-address></ipv6-service-chain-address>
+					<protocol></protocol>
+				</value>
+			</node>
+			<link>
+				<node type="virtual-router">
+					<name>default-global-system-config:opensdn-VirtualBox</name>
+				</node>
+				<node type="virtual-machine">
+					<name>cont1</name>
+				</node>
+				<metadata type="virtual-router-virtual-machine" />
+			</link>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:cont1-port</name>
+				</node>
+				<node type="virtual-machine">
+					<name>cont1</name>
+				</node>
+				<metadata type="virtual-machine-interface-virtual-machine" />
+			</link>
+			<link>
+				<node type="instance-ip">
+					<name>cont1-ip</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:vn-A</name>
+				</node>
+				<metadata type="instance-ip-virtual-network" />
+			</link>
+			<link>
+				<node type="instance-ip">
+					<name>cont1-ip</name>
+				</node>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:cont1-port</name>
+				</node>
+				<metadata type="instance-ip-virtual-machine-interface" />
+			</link>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:cont1-port</name>
+				</node>
+				<node type="project">
+					<name>default-domain:admin</name>
+				</node>
+				<metadata type="project-virtual-machine-interface" />
+			</link>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:cont1-port</name>
+				</node>
+				<node type="virtual-machine-interface-routing-instance">
+					<name>attr(default-domain:admin:cont1-port,default-domain:admin:vn-A:vn-A)</name>
+				</node>
+				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+			<link>
+				<node type="virtual-machine-interface-routing-instance">
+					<name>attr(default-domain:admin:cont1-port,default-domain:admin:vn-A:vn-A)</name>
+				</node>
+				<node type="routing-instance">
+					<name>default-domain:admin:vn-A:vn-A</name>
+				</node>
+				<metadata type="virtual-machine-interface-routing-instance" />
+			</link>
+			<link>
+				<node type="virtual-machine-interface">
+					<name>default-domain:admin:cont1-port</name>
+				</node>
+				<node type="virtual-network">
+					<name>default-domain:admin:vn-A</name>
+				</node>
+				<metadata type="virtual-machine-interface-virtual-network" />
+			</link>
+		</update>
+	</config>
+</iq>

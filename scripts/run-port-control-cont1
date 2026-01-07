@@ -1,0 +1,15 @@
+sudo ./vrouter-port-control \
+    --oper=add \
+    --uuid=00000000-0000-0000-0000-000000000002 \
+    --instance_uuid=00000000-0000-0000-0000-000000000015 \
+    --vn_uuid=00000000-0000-0000-0000-000000000067 \
+    --vm_project_uuid=00000000-0000-0000-0000-00000000000c \
+    --ip_address=10.10.10.11 \
+    --ipv6_address= \
+    --vm_name=cont1 \
+    --mac=7a:ab:8d:0b:4d:06 \
+    --tap_name=veth1 \
+    --port_type=NovaVMPort \
+    --tx_vlan_id=-1 \
+    --rx_vlan_id=-1 \
+    --vif_type=Vrouter
