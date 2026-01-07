@@ -1,0 +1,34 @@
+			<node type="virtual-network-network-ipam">
+				<name>attr(default-domain:default-project:default-network-ipam,default-domain:shared-nets:F)</name>
+				<value>
+					<ipam-subnets>
+						<subnet>
+							<ip-prefix>10.1.6.0</ip-prefix>
+							<ip-prefix-len>24</ip-prefix-len>
+						</subnet>
+						<default-gateway>10.1.6.1</default-gateway>
+						<dns-server-address>10.1.6.2</dns-server-address>
+						<subnet-uuid>140e4d6e-e640-4a3f-ad68-1bf507e0c6e0</subnet-uuid>
+						<enable-dhcp>true</enable-dhcp>
+						<addr_from_start>true</addr_from_start>
+						<dhcp-option-list />
+						<host-routes />
+						<subnet-name>140e4d6e-e640-4a3f-ad68-1bf507e0c6e0</subnet-name>
+						<alloc-unit>1</alloc-unit>
+						<created>1970-01-01T00:00:00</created>
+						<last-modified>1970-01-01T00:00:00</last-modified>
+						<subscriber-tag></subscriber-tag>
+						<vlan-tag>0</vlan-tag>
+					</ipam-subnets>
+					<host-routes />
+				</value>
+			</node>
+			<link>
+				<node type="virtual-network">
+					<name>default-domain:shared-nets:F</name>
+				</node>
+				<node type="virtual-network-network-ipam">
+					<name>attr(default-domain:default-project:default-network-ipam,default-domain:shared-nets:F)</name>
+				</node>
+				<metadata type="virtual-network-network-ipam" />
+			</link>
