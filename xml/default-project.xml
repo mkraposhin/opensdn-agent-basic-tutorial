@@ -1,6 +1,19 @@
 <iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:opensdn-VirtualBox/config">
 	<config>
 		<update>
+			<node type="virtual-machine-interface-routing-instance">
+				<name>attr(default-domain:default-project:ip-fabric:ip-fabric,default-global-system-config:opensdn-VirtualBox:vhost0)</name>
+				<value>
+					<direction>both</direction>
+					<vlan-tag>0</vlan-tag>
+					<src-mac></src-mac>
+					<dst-mac></dst-mac>
+					<mpls-label>0</mpls-label>
+					<service-chain-address></service-chain-address>
+					<ipv6-service-chain-address></ipv6-service-chain-address>
+					<protocol></protocol>
+				</value>
+			</node>
 			<link>
 				<node type="virtual-machine-interface-routing-instance">
 					<name>attr(default-domain:default-project:ip-fabric:ip-fabric,default-global-system-config:opensdn-VirtualBox:vhost0)</name>
@@ -124,7 +137,7 @@
 				<routing-instance-fabric-snat>false</routing-instance-fabric-snat>
 			</node>
 			<node type="access-control-list">
-				<name>default-domain:default-project:ip-fabric:ip-fabric</name>
+				<name>default-domain:default-project:ip-fabric:ip-fabric-acl</name>
 				<access-control-list-entries>
 					<dynamic>false</dynamic>
 					<acl-rule>
@@ -341,7 +354,7 @@
 			</node>
 			<link>
 				<node type="access-control-list">
-					<name>default-domain:default-project:ip-fabric:ip-fabric</name>
+					<name>default-domain:default-project:ip-fabric:ip-fabric-acl</name>
 				</node>
 				<node type="virtual-network">
 					<name>default-domain:default-project:ip-fabric</name>

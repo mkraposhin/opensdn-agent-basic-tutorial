@@ -1,0 +1,76 @@
+Step 0:
+sudo docker pull opensdn/opensdn-tools
+sudo docker run --privileged --pid host --net host --name opensdn-tools -ti opensdn/opensdn-tools:latest
+git clone https://github.com/mkraposhin/opensdn-forwarder-basic-tutorial.git tut-rep
+tar cfz tut-rep.tgz tut-rep && sudo docker cp ./tut-rep.tgz opensdn-tools:/tut-rep.tgz && sudo docker exec -ti opensdn-tools tar xfz tut-rep.tgz
+sudo docker start opensdn-tools
+sudo modprobe vrouter
+sudo docker start cont1
+sudo docker start cont2
+sudo bash tut-rep/scripts/make-veth veth1 veth1c cont1 10.1.1.11/24
+sudo bash tut-rep/scripts/make-veth veth2 veth2c cont2 10.1.1.22/24
+sudo bash tut-rep/scripts/make-vif veth1
+sudo bash tut-rep/scripts/make-vif veth2
+
+Step 1:
+git clone https://github.com/mkraposhin/opensdn-agent-basic-tutorial.git tut-agent
+sudo docker pull opensdn/opensdn-vrouter-agent
+sudo docker create --privileged --pid host --net host --name agent opensdn/opensdn-vrouter-agent:latest
+sudo docker cp tut-agent/scripts/entrypoint.sh agent:/
+sudo docker start agent
+
+Step 2:
+Copy vrouter-port-control into $HOME
+
+Step 3:
+Prepare Controller's ack message
+
+Step 4:
+sudo nc -4kl -s 10.0.2.15 -p 5269
+
+Step 5:
+Update global-config.xml, default-project.xml
+Update cont1.xml
+Update cont2.xml
+Update run-port-control-cont1
+Update run-port-control-cont2
+
+Step 6:
+sudo docker exec -ti agent bash
+# (inside the agent's container)
+source /actions.sh
+prepare_agent # (vhost0)
+create_agent_config
+/usr/bin/contrail-vrouter-agent
+
+
+Step 7:
+after: <stream:stream from="opensdn-VirtualBox" to="network-control@contrailsystems.com" version="1.0" xml:lang="en" xmlns="" xmlns:stream="http://etherx.jabber.org/streams" >
+
+Send hello via Controller:
+<stream:stream from="network-control@contrailsystems.com" to="opensdn-VirtualBox" id="++123" version="1.0" xml:lang="en" xmlns="" xmlns:stream="http://etherx.jabber.org/streams" >
+
+
+Step 8:
+Send global-config.xml
+Send default-project.xml
+Send admin-project.xml
+Send cont1.xml
+Send cont2.xml
+
+
+Step 9:
+tut-agent/scripts/run-port-control-cont1
+tut-agent/scripts/run-port-control-cont2
+Check ports: /var/lib/contrail/ports
+
+
+Step 10:
+Check interfaces table
+Check VRFs table:
+http://127.0.0.1:8085/Snh_VrfListReq?name=
+http://127.0.0.1:8085/Snh_ItfReq
+
+
+
+

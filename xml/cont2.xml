@@ -37,7 +37,7 @@
 				</ecmp-hashing-include-fields>
 				<port-security-enabled>true</port-security-enabled>
 				<virtual-machine-interface-mac-addresses>
-					<mac-address>96:2c:c1:a2:41:22</mac-address>
+					<mac-address>ca:20:76:c1:2c:89</mac-address>
 				</virtual-machine-interface-mac-addresses>
 				<virtual-machine-interface-dhcp-option-list />
 				<virtual-machine-interface-allowed-address-pairs />
