@@ -13,29 +13,35 @@ sudo bash tut-rep/scripts/make-vif veth1
 sudo bash tut-rep/scripts/make-vif veth2
 
 Step 1:
+Study OpenSDN data model
+Study vRouter Agent and vRouter Forwarder communication
+
+
+Step 2:
+Prepare network configuration using IF-MAP graph:
+ - update global-config.xml, default-project.xml
+ - update cont1.xml
+ - update cont2.xml
+ - update run-port-control-cont1
+ - update run-port-control-cont2
+
+Step 3:
 git clone https://github.com/mkraposhin/opensdn-agent-basic-tutorial.git tut-agent
 sudo docker pull opensdn/opensdn-vrouter-agent
 sudo docker create --privileged --pid host --net host --name agent opensdn/opensdn-vrouter-agent:latest
 sudo docker cp tut-agent/scripts/entrypoint.sh agent:/
 sudo docker start agent
 
-Step 2:
+Step 4:
 Copy vrouter-port-control into $HOME
 
-Step 3:
+Step 5:
 Prepare Controller's ack message
 
-Step 4:
+Step 6:
 sudo nc -4kl -s 10.0.2.15 -p 5269
 
-Step 5:
-Update global-config.xml, default-project.xml
-Update cont1.xml
-Update cont2.xml
-Update run-port-control-cont1
-Update run-port-control-cont2
-
-Step 6:
+Step 7:
 sudo docker exec -ti agent bash
 # (inside the agent's container)
 source /actions.sh
@@ -44,14 +50,14 @@ create_agent_config
 /usr/bin/contrail-vrouter-agent
 
 
-Step 7:
+Step 8:
 after: <stream:stream from="opensdn-VirtualBox" to="network-control@contrailsystems.com" version="1.0" xml:lang="en" xmlns="" xmlns:stream="http://etherx.jabber.org/streams" >
 
 Send hello via Controller:
 <stream:stream from="network-control@contrailsystems.com" to="opensdn-VirtualBox" id="++123" version="1.0" xml:lang="en" xmlns="" xmlns:stream="http://etherx.jabber.org/streams" >
 
 
-Step 8:
+Step 9:
 Send global-config.xml
 Send default-project.xml
 Send admin-project.xml
@@ -59,17 +65,20 @@ Send cont1.xml
 Send cont2.xml
 
 
-Step 9:
+Step 10:
 tut-agent/scripts/run-port-control-cont1
 tut-agent/scripts/run-port-control-cont2
 Check ports: /var/lib/contrail/ports
 
 
-Step 10:
+Step 11:
 Check interfaces table
 Check VRFs table:
 http://127.0.0.1:8085/Snh_VrfListReq?name=
 http://127.0.0.1:8085/Snh_ItfReq
+
+Step 12:
+Check connectivity
 
 
 

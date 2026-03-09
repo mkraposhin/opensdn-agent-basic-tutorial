@@ -1,4 +1,4 @@
-<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:compute1/config">
+<iq type="set" from="network-control@contrailsystems.com" to="default-global-system-config:opensdn-VirtualBox/config">
 	<config>
 		<update>
       <node type="virtual-machine">
