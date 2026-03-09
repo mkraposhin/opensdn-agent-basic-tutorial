@@ -71,7 +71,9 @@ Step 7:
 Step 8:
 -------
 
-after: <stream:stream from="opensdn-VirtualBox" to="network-control@contrailsystems.com" version="1.0" xml:lang="en" xmlns="" xmlns:stream="http://etherx.jabber.org/streams" >
+after:
+
+    <stream:stream from="opensdn-VirtualBox" to="network-control@contrailsystems.com" version="1.0" xml:lang="en" xmlns="" xmlns:stream="http://etherx.jabber.org/streams" >
 
 Send hello via Controller (controller-reply.xml):
 
