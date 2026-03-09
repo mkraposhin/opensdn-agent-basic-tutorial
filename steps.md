@@ -54,7 +54,7 @@ Prepare Controller's ack message (controller-reply.xml)
 Step 6:
 -------
 
-sudo nc -4kl -s 10.0.2.15 -p 5269
+    sudo nc -4kl -s 10.0.2.15 -p 5269
 
 Step 7:
 -------
@@ -74,6 +74,7 @@ Step 8:
 after: <stream:stream from="opensdn-VirtualBox" to="network-control@contrailsystems.com" version="1.0" xml:lang="en" xmlns="" xmlns:stream="http://etherx.jabber.org/streams" >
 
 Send hello via Controller (controller-reply.xml):
+
     <stream:stream from="network-control@contrailsystems.com" to="opensdn-VirtualBox" id="++123" version="1.0" xml:lang="en" xmlns="" xmlns:stream="http://etherx.jabber.org/streams" >
 
 
@@ -108,6 +109,18 @@ Step 12:
 
 Check connectivity
 
+1. For ICMP connectivity, inside container 2, run:
+
+    ping 10.1.1.11
 
 
+2. For UDP connectivity:
+    - inside container 1, run:
 
+        nc -4ul -s 10.1.1.11 -p 12000
+
+    - inside container 2, run:
+
+        nc -4u 10.1.1.11 12000
+
+    - send messages between containers
