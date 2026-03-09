@@ -116,11 +116,7 @@ Check connectivity
 
 2. For UDP connectivity:
     - inside container 1, run:
-
         nc -4ul -s 10.1.1.11 -p 12000
-
     - inside container 2, run:
-
         nc -4u 10.1.1.11 12000
-
     - send messages between containers
